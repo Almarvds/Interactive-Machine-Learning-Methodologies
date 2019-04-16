@@ -55,7 +55,7 @@ public class test_class extends PApplet
 
     public void draw(){
         for(int i=0;i<numberofBlocks;i++){
-            drawCategory(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i));
+            drawCategory(i);
             if(enabled[i] == true){
                 drawX(i);
             }
@@ -73,18 +73,21 @@ public class test_class extends PApplet
         }
 
         //check mouse for hovering the like and dislike
-        if(mouseY>(largeBlockY+largeBlockSize+20)/2 && mouseY < (largeBlockY+largeBlockSize+20)/2+40){
-            fill(200);
-            if(mouseX>largeBlockX+20 && mouseX < largeBlockX + 60){
-                rect(largeBlockX+20,(largeBlockY+largeBlockSize+20)/2,40,40);
+        if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
+            if(mouseX>largeBlockX+30 && mouseX < largeBlockX + 90){
+                PImage like = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\like-01.png");
+                image(like, largeBlockX+30,(largeBlockY+largeBlockSize+30)/2,60,60);
             }
-            if(mouseX>largeBlockX+largeBlockSize-60 && mouseX < largeBlockX+largeBlockSize-20){
-                rect(largeBlockX+largeBlockSize-60,(largeBlockY+largeBlockSize+20)/2,40,40);
+            if(mouseX>largeBlockX+largeBlockSize-90 && mouseX < largeBlockX+largeBlockSize-30){
+                PImage dislike = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\dislike-01.png");
+                image(dislike, largeBlockX+largeBlockSize-90,(largeBlockY+largeBlockSize+30)/2,60,60);
             }
         }
     }
 
     public void mousePressed(){
+
+        //check if categories are being clicked whenever the mouse clicks
         if(mouseX>sizeofBlocks && mouseX<sizeofBlocks*2){
             for(int i=0;i<numberofBlocks;i++){
                 if(mouseY>blocksY+((sizeofBlocks+distanceBetweenBlocks)*i) && mouseY<blocksY+ sizeofBlocks +
@@ -93,13 +96,23 @@ public class test_class extends PApplet
                 }
             }
         }
+
+        //check if either the like or dislike button is clicked whenever the mouse clicks
+        if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
+            if(mouseX>largeBlockX+30 && mouseX < largeBlockX + 90){
+                likeButtonPressed();
+            }
+            if(mouseX>largeBlockX+largeBlockSize-90 && mouseX < largeBlockX+largeBlockSize-30){
+                dislikeButtonPressed();
+            }
+        }
     }
 
     //draws categories
-    void drawCategory(float a, float b){
+    void drawCategory(int i){
         noStroke();
         fill(240,240,240);
-        rect(a,b,sizeofBlocks,sizeofBlocks,10);
+        rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
     }
 
     //draws hover effects
@@ -119,17 +132,18 @@ public class test_class extends PApplet
     }
 
     void drawLikeandDislike(){
-        fill(0);
-        rect(largeBlockX+20,(largeBlockY+largeBlockSize+20)/2,40,40);
-        rect(largeBlockX+largeBlockSize-60,(largeBlockY+largeBlockSize+20)/2,40,40);
+    PImage like = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\likes-02.png");
+        PImage dislike = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\dislikes-02.png");
+        image(like, largeBlockX+30,(largeBlockY+largeBlockSize+30)/2,60,60);
+        image(dislike, largeBlockX+largeBlockSize-90,(largeBlockY+largeBlockSize+30)/2,60,60);
     }
 
     void likeButtonPressed(){
-
+        System.out.println("LIKE!");
     }
 
     void dislikeButtonPressed(){
-
+        System.out.println("DISLIKE!");
     }
 
 }
