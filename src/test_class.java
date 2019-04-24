@@ -51,6 +51,11 @@ public class test_class extends PApplet
         rect(largeBlockX,largeBlockY,largeBlockSize,largeBlockSize,10);
 
         enabled = new boolean[numberofBlocks];
+        setUserProfile();
+    }
+
+    public void setUserProfile(){
+
     }
 
     public void draw(){
@@ -113,6 +118,22 @@ public class test_class extends PApplet
         noStroke();
         fill(240,240,240);
         rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
+        fill(0);
+        textSize(14);
+        if (i==0){
+            textAlign(CENTER);
+            text("Main color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
+            //image(Color, blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
+        }
+        if (i==1){
+            text("Second color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
+        }
+        if (i==2){
+            text("Function",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
+        }
+        if (i==3){
+            text("Style",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
+        }
     }
 
     //draws hover effects
