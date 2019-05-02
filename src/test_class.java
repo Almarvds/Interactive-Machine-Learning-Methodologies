@@ -38,6 +38,11 @@ public class test_class extends PApplet
 
         PImage backgroundRoom = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\rooms\\Room1.jpg");
         background(backgroundRoom);
+        noStroke();
+        fill(0,0,0,180);
+        rect(0,0,width,height);
+        fill(30,30,30);
+        rect(0,0,width,60);
 
         sizeofBlocks = (width-largeBlockSize)/4;
         largeBlockX = ((width-largeBlockSize)/4)*3;
@@ -144,7 +149,9 @@ public class test_class extends PApplet
 
     void drawX(int i){
         PImage redX = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\redX.png");
-        image(redX,blocksX+10,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+10,sizeofBlocks-20,sizeofBlocks-20);
+        image(redX,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
+        fill(0,0,0,180);
+        rect( blocksX, blocksY+((sizeofBlocks+distanceBetweenBlocks)*i), sizeofBlocks, sizeofBlocks, 10);
     }
 
     //disables or enables categories when clicked
