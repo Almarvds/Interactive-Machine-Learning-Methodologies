@@ -21,78 +21,44 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Color1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Color1.java">
+      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test_class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-121">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="700">
+              <caret line="134" column="158" lean-forward="false" selection-start-line="134" selection-start-column="158" selection-end-line="134" selection-end-column="158" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test_class.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#draw#0;class#test_class#0" expanded="false" />
-                <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
-              </folding>
-            </state>
+      <file leaf-file-name="download.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download (2).jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download (2).jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download (1).jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download (1).jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Color2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Color2.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
               <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Functionality.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Functionality.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Style.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Style.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -107,6 +73,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>item</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
@@ -196,8 +167,26 @@
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rooms" />
+              <option name="myItemId" value="Furnishing_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Furnishing_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="furnishing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -218,6 +207,10 @@
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -232,14 +225,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\furnishing" />
+      <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\categories" />
+      <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images" />
+      <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\buttons" />
+      <recent name="C:\Users\s159536\Documents\GitHub\ML-Opt-out-classification" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\buttons" />
       <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\.idea\data" />
       <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\rooms" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\s159536\IdeaProjects\Furnishing_App\Assets\images\buttons" />
-      <recent name="C:\Users\s159536\Documents\GitHub\ML-Opt-out-classification" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -625,21 +621,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/NewItem" />
-    <entry file="file://$PROJECT_DIR$/src/Test" />
-    <entry file="file://$PROJECT_DIR$/Assets/images/buttons/no-entry.png" />
-    <entry file="file://$PROJECT_DIR$/Assets/images/buttons/heart.png" />
-    <entry file="file://$PROJECT_DIR$/Assets/images/buttons/like-02.png" />
-    <entry file="file://$PROJECT_DIR$/Assets/images/buttons/dislike-01.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/images/buttons/likes-02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/images/buttons/dislikes-02.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -687,10 +668,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,8 +718,6 @@
           <caret line="125" column="14" lean-forward="false" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,8 +766,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -803,20 +786,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -832,8 +801,6 @@
           <caret line="97" column="54" lean-forward="false" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -844,8 +811,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -914,33 +879,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Color1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/categories/blue_drop.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/categories/chair_icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/categories/grey_drop.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="63">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Color1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/Assets/images/categories/Untitled-1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download (2).jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download (1).jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/download.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="700">
+          <caret line="134" column="158" lean-forward="false" selection-start-line="134" selection-start-column="158" selection-end-line="134" selection-end-column="158" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
