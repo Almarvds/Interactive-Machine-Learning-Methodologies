@@ -20,10 +20,12 @@ public class test_class extends PApplet
     int distanceBetweenBlocks;
 
     Item item;
+    ItemSelector itemSelector;
 
 
     //code elements
     boolean[] enabled = new boolean[0];
+    boolean loadedImages;
 
     public static void main(String[]args){
         PApplet.main("test_class",args);
@@ -54,22 +56,37 @@ public class test_class extends PApplet
         blocksY = largeBlockY;
         distanceBetweenBlocks = (largeBlockSize - (numberofBlocks*sizeofBlocks))/(numberofBlocks-1) ;
 
-        fill(240,240,240);
+        fill(240,240,240,200);
         strokeWeight(5);
         stroke(0);
         rect(largeBlockX,largeBlockY,largeBlockSize,largeBlockSize,10);
 
         enabled = new boolean[numberofBlocks];
         setUserProfile();
+        System.out.println("finished setup");
     }
 
     public void setUserProfile(){
-        PImage bluedrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\blue_drop.png");
-        PImage greydrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\grey_drop.png");
-        PImage StartChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\download.jpg");
-        PImage styling = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Untitled-1.png");
-        PImage func = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\chair_icon.png");
-        item = new Item(StartChair, greydrop, null, func, styling);
+        itemSelector = new ItemSelector();
+        loadCategories();
+        loadChairs();
+        item = new Item(itemSelector.Chair, itemSelector.greydrop, null, itemSelector.func, itemSelector.styling);
+        itemSelector.AssignChairs();
+    }
+
+    public void loadCategories(){
+        itemSelector.reddrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\red_drop.png");
+        itemSelector.browndrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\brown_drop.png");
+        itemSelector.bluedrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\blue_drop.png");
+        itemSelector.greydrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\grey_drop.png");
+        itemSelector.styling = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Untitled-1.png");
+        itemSelector.func = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\chair_icon.png");
+    }
+
+    public void loadChairs(){
+        itemSelector.likeChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair grnm.jpg");
+        itemSelector.dislikeChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair brnm.png");
+        itemSelector.Chair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair grbrt.jpg");
     }
 
     public void draw(){
@@ -190,31 +207,11 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed(){
-        System.out.println("LIKE!");
-        item.itemImage = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\download (1).jpg");
+        item = itemSelector.returnLikedItem(item);
     }
 
     void dislikeButtonPressed(){
-        System.out.println("DISLIKE!");
-        item.itemImage = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\download (2).jpg");
-
+        item = itemSelector.returnDislikedItem(item);
     }
 
-
-    public class Item {
-
-        public PImage itemImage;
-        public PImage itemColor1;
-        public PImage itemColor2;
-        public PImage functionality;
-        public PImage styling;
-
-        Item(PImage currentItemImage, PImage color1, PImage color2, PImage function, PImage style ){
-            itemImage = currentItemImage;
-            itemColor1 = color1;
-            itemColor2 = color2;
-            functionality = function;
-            styling = style;
-        }
-    }
 }
