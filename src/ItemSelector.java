@@ -6,34 +6,46 @@ import processing.core.PApplet;
  */
 public class ItemSelector extends PApplet{
 
-    public PImage dislikeChair;
-    public PImage likeChair;
-    public PImage itemImage;
-    public PImage itemColor1;
-    public PImage itemColor2;
     public PImage reddrop;
-    public PImage bluedrop;
-    public PImage Chair;
-    public PImage styling;
-    public PImage func;
-
+    public PImage greendrop;
+    public PImage yellowdrop;
     public PImage greydrop;
+    public PImage blackdrop;
+    public PImage bluedrop;
+    public PImage pinkdrop;
+    public PImage purpledrop;
     public PImage browndrop;
+
+    public PImage Chair;
+    public PImage Classic;
+    public PImage Basic;
+    public PImage Modern;
+
+    public PImage functionChair;
+    public PImage functionAccesory;
+    public PImage functionCloset;
+    public PImage functionCouch;
+
 
     public Item Chair_brnm;
     public Item Chair_brnr;
-    public Item Chair_grbrt;
+    public Item Chair_grbrc;
     public Item Chair_grnm;
+
+    PImage chair_Brnm;
+    PImage chair_Brnr;
+    PImage chair_Grbrc;
+    PImage chair_Grnm;
 
     ItemSelector(){
 
     }
 
     void AssignChairs(){
-        Chair_brnm = new Item(likeChair, greydrop, itemColor2, func, styling);
-        Chair_brnr = new Item(dislikeChair, browndrop, itemColor2, func, styling);
-        Chair_grbrt = new Item(dislikeChair, browndrop, itemColor2, func, styling);
-        Chair_grnm = new Item(dislikeChair, browndrop, itemColor2, func, styling);
+        Chair_brnm = new Item(chair_Brnm, greydrop, null, functionChair, Modern);
+        Chair_brnr = new Item(chair_Brnr, browndrop, null, functionChair, Basic);
+        Chair_grbrc = new Item(chair_Grbrc, browndrop, null, functionChair, Classic);
+        Chair_grnm = new Item(chair_Grnm, browndrop, null, functionChair, Modern);
     }
 
     Item returnLikedItem(Item item){
