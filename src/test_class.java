@@ -70,7 +70,7 @@ public class test_class extends PApplet
         itemSelector = new ItemSelector();
         loadCategories();
         loadChairs();
-        item = new Item(itemSelector.Chair, itemSelector.greydrop, null, itemSelector.functionChair, itemSelector.Basic);
+        item = new Item(itemSelector.chair_Grbrc, itemSelector.greydrop, itemSelector.browndrop, itemSelector.functionChair, itemSelector.Basic);
         itemSelector.AssignChairs();
     }
 
@@ -94,9 +94,36 @@ public class test_class extends PApplet
     }
 
     public void loadChairs(){
+
+        itemSelector.chair_Bnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair bnb.jpg");
+        itemSelector.chair_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair bnm.jpg");
+
+        itemSelector.chair_Brnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair brbrb.jpg");
         itemSelector.chair_Brnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair brnm.jpg");
+        itemSelector.chair_Brnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair brnc.jpg");
+
+        itemSelector.chair_Gnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair gnb.jpg");
+        itemSelector.chair_Gnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair gnc.jpg");
+        itemSelector.chair_Gnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair gnm.jpg");
+
+        itemSelector.chair_Grbrc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair grbrc.jpg");
         itemSelector.chair_Grnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair grnm.jpg");
-        itemSelector.Chair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair grbrc.jpg");
+
+        itemSelector.chair_Pinb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair pinb.jpg");
+        itemSelector.chair_Pinc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair_pinc.jpg");
+        itemSelector.chair_Pinm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair_pinm.jpg");
+
+        itemSelector.chair_Punb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair_punb.jpg");
+        itemSelector.chair_Punc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair_punc.jpg");
+
+        itemSelector.chair_Yenb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair yenb.jpg");
+        itemSelector.chair_Yenc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair yenc.jpg");
+        itemSelector.chair_Yenm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair yenm.jpg");
+
+        itemSelector.chair_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair rnm.jpg");
+        itemSelector.chair_Rbb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\chair rbb.jpg");
+
+
     }
 
     public void draw(){
@@ -225,7 +252,7 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed(){
-        item = itemSelector.returnLikedItem(item);
+        item = itemSelector.returnLikedItem(item, enabled);
     }
 
     void dislikeButtonPressed(){
