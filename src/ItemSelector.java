@@ -57,6 +57,31 @@ public class ItemSelector extends PApplet{
     public Item chair_rnm;
     public Item chair_rbb;
 
+    //couches
+
+    public Item couch_bnb;
+    public Item couch_bnm;
+
+    public Item couch_brnb;
+    public Item couch_brnc;
+
+    public Item couch_yenb;
+    public Item couch_yenm;
+
+    public Item couch_gnb;
+    public Item couch_gnm;
+
+    public Item couch_grnm;
+
+    public Item couch_pinb;
+    public Item couch_pinc;
+
+    public Item couch_punb;
+
+    public Item couch_rnb;
+    public Item couch_rnm;
+
+
     //</editor-fold>
 
     //<editor-fold desc="PImages Inventory">
@@ -87,6 +112,30 @@ public class ItemSelector extends PApplet{
 
     PImage chair_Rnm;
     PImage chair_Rbb;
+
+    //couches
+
+    PImage couch_Bnb;
+    PImage couch_Bnm;
+
+    PImage couch_Brnb;
+    PImage couch_Brnc;
+
+    PImage couch_Yenb;
+    PImage couch_Yenm;
+
+    PImage couch_Gnb;
+    PImage couch_Gnm;
+
+    PImage couch_Grnm;
+
+    PImage couch_Pinb;
+    PImage couch_Pinc;
+
+    PImage couch_Punb;
+
+    PImage couch_Rnb;
+    PImage couch_Rnm;
 
     //</editor-fold>
 
@@ -123,15 +172,89 @@ public class ItemSelector extends PApplet{
 
         chair_rnm = new Item(chair_Rnm, reddrop, null, functionChair, Modern);
         chair_rbb = new Item(chair_Rbb, reddrop, browndrop, functionChair, Basic);
+
+        //couches
+
+        couch_bnb = new Item(couch_Bnb, bluedrop, null, functionCouch, Basic);
+        couch_bnm = new Item(couch_Bnm, bluedrop, null, functionCouch, Modern);
+
+        couch_brnb = new Item(couch_Brnb, browndrop, null, functionCouch, Basic);
+        couch_brnc = new Item(couch_Brnc, browndrop, null, functionCouch, Classic);
+
+        couch_yenb = new Item(couch_Yenb, yellowdrop, null, functionCouch, Basic);
+        couch_yenm = new Item(couch_Yenm, yellowdrop, null, functionCouch, Modern);
+
+        couch_gnb = new Item(couch_Gnb, greendrop, null, functionCouch, Basic);
+        couch_gnm = new Item(couch_Gnm, greendrop, null, functionCouch, Modern);
+
+        couch_grnm = new Item(couch_Grnm, greydrop, null, functionCouch, Modern);
+
+        couch_pinb = new Item(couch_Pinb, pinkdrop, null, functionCouch, Basic);
+        couch_pinc = new Item(couch_Pinc, pinkdrop, null, functionCouch, Classic);
+
+        couch_punb = new Item(couch_Punb, purpledrop, null, functionCouch, Basic);
+
+        couch_rnb = new Item(couch_Rnb, reddrop, null, functionCouch, Basic);
+        couch_rnm = new Item(couch_Rnm, reddrop, null, functionCouch, Modern);
+
     }
 
-    Item returnLikedItem(Item item, boolean[] disabled){
+    Item returnLikedItem(Item item, boolean[] enabled){
         System.out.println("LIKED ITEM!");
-        return chair_grnm;
+        return item;
     }
 
-    Item returnDislikedItem(Item item){
+    Item DislikedColor(Item item){
+       return item;
+    }
+
+    Item DislikedColornType(Item item){
+        return item;
+    }
+
+    Item DislikedColornStyle(Item item){
+        return item;
+    }
+
+    Item DislikedColornTypenStyle(Item item){
+        return item;
+    }
+
+    Item DislikedType(Item item){
+        return item;
+    }
+
+    Item DislikedTypenStyle(Item item){
+        return item;
+    }
+
+    Item DislikedStyle(Item item){
+        return item;
+    }
+
+    Item returnDislikedItem(Item item, boolean[] enabled){
         System.out.println("DISLIKED ITEM!");
+        if(enabled[0] == true){
+            if(enabled[2]==true){
+                if (enabled [3] == true){
+                    return DislikedColornTypenStyle(item);
+                }
+                return DislikedColornType(item);
+            }
+            if(enabled [3] == true){
+                return DislikedColornStyle(item);
+            }
+            return DislikedColor(item);
+        }
+        if(enabled[2] == true){
+            if(enabled [3] == true){
+                return DislikedTypenStyle(item);
+            }
+            return DislikedType(item);
+        }
+        if(enabled[3] == true){
+            DislikedStyle(item);
+        }
         return chair_brnm;
     }
 }
