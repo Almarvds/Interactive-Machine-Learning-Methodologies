@@ -3,6 +3,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 import java.awt.*;
+import java.util.Set;
 
 public class test_class extends PApplet
 {
@@ -19,12 +20,13 @@ public class test_class extends PApplet
     int blocksY;
     int distanceBetweenBlocks;
 
-    Item item;
+    Item item = new Item(null,null,null,null,null,null,null,
+            null,null,null,null,null);
     ItemSelector itemSelector;
 
 
     //code elements
-    boolean[] enabled = new boolean[0];
+    boolean[] disabled = new boolean[0];
     boolean loadedImages;
 
     public static void main(String[]args){
@@ -61,7 +63,7 @@ public class test_class extends PApplet
         stroke(0);
         rect(largeBlockX,largeBlockY,largeBlockSize,largeBlockSize,10);
 
-        enabled = new boolean[numberofBlocks];
+        disabled = new boolean[numberofBlocks];
         setUserProfile();
         System.out.println("finished setup");
     }
@@ -69,10 +71,14 @@ public class test_class extends PApplet
     public void setUserProfile(){
         itemSelector = new ItemSelector();
         loadCategories();
+        System.out.println("printed categories");
         loadChairs();
+        System.out.println("loaded chair images");
         loadCouches();
-        item = new Item(itemSelector.chair_Grbrc, itemSelector.greydrop, itemSelector.browndrop, itemSelector.functionChair, itemSelector.Basic);
+        System.out.println("loaded couch images");
         itemSelector.AssignChairs();
+        System.out.println("Assigned chair values");
+        setItem(itemSelector.couch_bnb);
     }
 
     public void loadCategories(){
@@ -127,34 +133,34 @@ public class test_class extends PApplet
     }
 
     public void loadCouches(){
-        itemSelector.couch_Bnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnb.jpg");
-        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair brnc.jpg");
+        itemSelector.couch_Bnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_bnb.jpg");
+        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
 
-        itemSelector.couch_Brnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair brnb.jpg");
-        itemSelector.couch_Brnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair brnc.jpg");
+        itemSelector.couch_Brnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnb.jpg");
+        itemSelector.couch_Brnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
 
-        itemSelector.couch_Yenb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair yenb.jpg");
-        itemSelector.couch_Yenm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair yenm.jpg");
+        itemSelector.couch_Yenb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch yenb.jpg");
+        itemSelector.couch_Yenm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch yenm.jpg");
 
-        itemSelector.couch_Gnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_grnm.jpg");
-        itemSelector.couch_Gnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_grnm.jpg");
+        itemSelector.couch_Gnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_gnb.jpg");
+        itemSelector.couch_Gnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_gnm.jpg");
 
         itemSelector.couch_Grnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_grnm.jpg");
 
-        itemSelector.couch_Pinb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\chair_pinb.jpg");
+        itemSelector.couch_Pinb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_pinb.jpg");
         itemSelector.couch_Pinc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_pinc.jpg");
 
         itemSelector.couch_Punb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_punb.jpg");
 
-        itemSelector.couch_Rnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnb.jpg");
-        itemSelector.couch_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_ rnm.jpg");
+        itemSelector.couch_Rnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnb.png");
+        itemSelector.couch_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnm.jpg");
     }
 
 
-        public void draw(){
+    public void draw(){
         for(int i=0;i<numberofBlocks;i++){
             drawCategory(i);
-            if(enabled[i] == true){
+            if(disabled[i] == true){
                 drawX(i);
             }
         }
@@ -230,7 +236,8 @@ public class test_class extends PApplet
         if (i==0){
             textAlign(CENTER);
             text("Main color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            image(item.itemColor1,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
+            if(item.itemColor1 != null)
+                image(item.itemColor1,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
         }
         if (i==1){
             text("Second color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
@@ -239,11 +246,13 @@ public class test_class extends PApplet
         }
         if (i==2){
             text("Function",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            image(item.functionality,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
+            if(item.functionality != null)
+                image(item.functionality,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
         }
         if (i==3){
             text("Style",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            image(item.styling,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
+            if(item.styling != null)
+                image(item.styling,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
         }
     }
 
@@ -262,7 +271,7 @@ public class test_class extends PApplet
 
     //disables or enables categories when clicked
     void clickedCategory(int i){
-        enabled[i] =! enabled[i];
+        disabled[i] =! disabled[i];
     }
 
     void drawLikeandDislike(){
@@ -277,11 +286,19 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed(){
-        item = itemSelector.returnLikedItem(item, enabled);
+        item = itemSelector.returnLikedItem(item, disabled);
     }
 
     void dislikeButtonPressed(){
-        item = itemSelector.returnDislikedItem(item, enabled);
+        setItem(itemSelector.returnDislikedItem(item, disabled));
+    }
+
+    void setItem(Item SetItem){
+        System.out.println(SetItem);
+        System.out.println(itemSelector.chair_bnm.itemColor1);
+        System.out.println("setting new item");
+        item = SetItem;
+        System.out.println("new item set");
     }
 
 }
