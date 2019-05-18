@@ -53,7 +53,7 @@ public class test_class extends PApplet
         rect(0,0,width,60);
 
         sizeofBlocks = (width-largeBlockSize)/4;
-        largeBlockX = ((width-largeBlockSize)/4)*3;
+        largeBlockX = ((width-largeBlockSize)/2);
         largeBlockY = (height-largeBlockSize)/2;
         blocksX = sizeofBlocks;
         blocksY = largeBlockY;
@@ -160,24 +160,8 @@ public class test_class extends PApplet
 
 
     public void draw(){
-        for(int i=0;i<numberofBlocks;i++){
-            drawCategory(i);
-            if(disabled[i] == true){
-                drawX(i);
-            }
-        }
         drawItem();
         drawLikeandDislike();
-
-        //check mouse for hovering categories
-        if(mouseX>sizeofBlocks && mouseX<sizeofBlocks*2) {
-            for (int i = 0; i < numberofBlocks; i++) {
-                if (mouseY > blocksY + ((sizeofBlocks + distanceBetweenBlocks) * i) && mouseY < blocksY + sizeofBlocks +
-                        ((sizeofBlocks + distanceBetweenBlocks) * i)) {
-                    hoverCategory(i);
-                }
-            }
-        }
 
         //check mouse for hovering the like and dislike
         if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
@@ -197,27 +181,15 @@ public class test_class extends PApplet
     }
 
     private void drawItem() {
-
+        strokeWeight(5);
         int imageSize = 350;
-        rect(largeBlockX - 3 + (largeBlockSize-imageSize)/2 ,largeBlockY - 3 + (largeBlockSize-imageSize)/2 ,
-                imageSize +6 ,imageSize + 6,2);
+        rect(largeBlockX -2 + (largeBlockSize-imageSize)/2 ,largeBlockY - 2 + (largeBlockSize-imageSize)/2 ,
+                imageSize +4 ,imageSize + 4,2);
         image(item.itemImage,largeBlockX +(largeBlockSize-imageSize)/2,largeBlockY+(largeBlockSize-imageSize)/2,
                 imageSize,imageSize);
-
     }
 
     public void mousePressed(){
-
-        //check if categories are being clicked whenever the mouse clicks
-        if(mouseX>sizeofBlocks && mouseX<sizeofBlocks*2){
-            for(int i=0;i<numberofBlocks;i++){
-                if(mouseY>blocksY+((sizeofBlocks+distanceBetweenBlocks)*i) && mouseY<blocksY+ sizeofBlocks +
-                        ((sizeofBlocks+distanceBetweenBlocks)*i)){
-                    clickedCategory(i);
-                }
-            }
-        }
-
         //check if either the like or dislike button is clicked whenever the mouse clicks
         if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
             if(mouseX>largeBlockX +((((largeBlockSize-350)/2)-60)/2) && mouseX < largeBlockX +((((largeBlockSize-350)/2)-60)/2)+60){
@@ -227,41 +199,6 @@ public class test_class extends PApplet
                 dislikeButtonPressed();
             }
         }
-    }
-
-    //draws categories
-    void drawCategory(int i){
-        fill(197,196,194);
-        rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
-        fill(0);
-        textSize(14);
-        if (i==0){
-            textAlign(CENTER);
-            text("Main color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.itemColor1 != null)
-                image(item.itemColor1,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==1){
-            text("Second color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.itemColor2 != null)
-                image(item.itemColor2,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==2){
-            text("Function",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.functionality != null)
-                image(item.functionality,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==3){
-            text("Style",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.styling != null)
-                image(item.styling,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
-        }
-    }
-
-    //draws hover effects
-    void hoverCategory(int i){
-        fill(255,255,255,200);
-        rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
     }
 
     void drawX(int i){
@@ -277,11 +214,6 @@ public class test_class extends PApplet
         textSize(20);
         fill(0);
         text("Congratulations, you found the red chair!",largeBlockX + largeBlockSize/2,largeBlockY+ largeBlockSize - ((largeBlockSize-350)/4));
-    }
-
-    //disables or enables categories when clicked
-    void clickedCategory(int i){
-        disabled[i] =! disabled[i];
     }
 
     void drawLikeandDislike(){
