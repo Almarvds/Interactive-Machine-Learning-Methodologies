@@ -20,8 +20,7 @@ public class test_class extends PApplet
     int blocksY;
     int distanceBetweenBlocks;
 
-    Item item = new Item(null,null,null,null,null,null,null,
-            null,null,null,null,null);
+    Item item = new Item(null,null,null,null,null,null,null);
     ItemSelector itemSelector;
 
 
@@ -160,6 +159,7 @@ public class test_class extends PApplet
 
 
     public void draw(){
+
         drawItem();
         drawLikeandDislike();
 
@@ -182,6 +182,7 @@ public class test_class extends PApplet
 
     private void drawItem() {
         strokeWeight(5);
+        stroke(0);
         int imageSize = 350;
         rect(largeBlockX -2 + (largeBlockSize-imageSize)/2 ,largeBlockY - 2 + (largeBlockSize-imageSize)/2 ,
                 imageSize +4 ,imageSize + 4,2);
@@ -199,13 +200,6 @@ public class test_class extends PApplet
                 dislikeButtonPressed();
             }
         }
-    }
-
-    void drawX(int i){
-        PImage redX = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\redX.png");
-        image(redX,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
-        fill(0,0,0,180);
-        rect( blocksX, blocksY+((sizeofBlocks+distanceBetweenBlocks)*i), sizeofBlocks, sizeofBlocks, 8);
     }
 
     //draw congratulations
@@ -228,18 +222,16 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed() {
-        if(!finished) {
-            if (itemSelector.returnLikedItem(item)) {
-                System.out.println("You did it!!!");
-                finished = true;
-                drawCongratulations();
-            }
-        }
+        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished)
+            finished = true;
+            drawCongratulations();
+        if(!finished)
+            setItem(itemSelector.returnDislikedItem(item));
     }
 
     void dislikeButtonPressed(){
         if(!finished)
-        setItem(itemSelector.returnDislikedItem(item, disabled));
+        setItem(itemSelector.returnDislikedItem(item));
     }
 
     void setItem(Item SetItem){

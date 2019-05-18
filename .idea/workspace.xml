@@ -21,39 +21,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test_class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="185" column="75" lean-forward="false" selection-start-line="185" selection-start-column="75" selection-end-line="185" selection-end-column="75" />
+            <state relative-caret-position="462">
+              <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#setup#0;class#test_class#0" expanded="false" />
                 <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
                 <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
                 <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
                 <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
-                <element signature="method#drawX#0;class#test_class#0" expanded="false" />
+                <element signature="method#draw#0;class#test_class#0" expanded="false" />
+                <element signature="method#drawItem#0;class#test_class#0" expanded="false" />
+                <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
                 <element signature="method#drawCongratulations#0;class#test_class#0" expanded="false" />
                 <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
-                <element signature="method#dislikeButtonPressed#0;class#test_class#0" expanded="false" />
-                <element signature="method#setItem#0;class#test_class#0" expanded="false" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chair_punb.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair_punb.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="189">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,20 +55,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemSelector.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ItemSelector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ItemSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="240" column="6" lean-forward="false" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="6" />
+            <state relative-caret-position="1470">
+              <caret line="200" column="78" lean-forward="false" selection-start-line="200" selection-start-column="78" selection-end-line="200" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="n#!!doc;n#reddrop#0;n#ItemSelector#0" expanded="false" />
                 <element signature="n#!!doc;n#chair_bnb#0;n#ItemSelector#0" expanded="false" />
                 <element signature="n#!!doc;n#chair_Bnb#0;n#ItemSelector#0" expanded="false" />
                 <element signature="method#ItemSelector#0;class#ItemSelector#0" expanded="false" />
-                <element signature="method#AssignChairs#0;class#ItemSelector#0" expanded="false" />
                 <element signature="method#StringConverter#0;class#ItemSelector#0" expanded="false" />
-                <element signature="method#returnDislikedItem#0;class#ItemSelector#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,6 +94,7 @@
       <find>enabled</find>
       <find>chair_bnm</find>
       <find>chair_bnb</find>
+      <find>noStroke</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -505,11 +498,33 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.5021482" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32968238" sideWeight="0.49785176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31982476" sideWeight="0.49785176" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.196875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -576,7 +591,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -591,6 +606,16 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#test_class#0" expanded="false" />
+            <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
+            <element signature="method#draw#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawItem#0;class#test_class#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawCongratulations#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,48 +795,47 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ItemSelector.java">
+    <entry file="file://$PROJECT_DIR$/src/test_class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="240" column="6" lean-forward="false" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="6" />
+        <state relative-caret-position="462">
+          <caret line="22" column="59" lean-forward="false" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#reddrop#0;n#ItemSelector#0" expanded="false" />
-            <element signature="n#!!doc;n#chair_bnb#0;n#ItemSelector#0" expanded="false" />
-            <element signature="n#!!doc;n#chair_Bnb#0;n#ItemSelector#0" expanded="false" />
-            <element signature="method#ItemSelector#0;class#ItemSelector#0" expanded="false" />
-            <element signature="method#AssignChairs#0;class#ItemSelector#0" expanded="false" />
-            <element signature="method#StringConverter#0;class#ItemSelector#0" expanded="false" />
-            <element signature="method#returnDislikedItem#0;class#ItemSelector#0" expanded="false" />
+            <element signature="method#setup#0;class#test_class#0" expanded="false" />
+            <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
+            <element signature="method#draw#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawItem#0;class#test_class#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawCongratulations#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_class.java">
+    <entry file="file://$PROJECT_DIR$/src/ItemSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="185" column="75" lean-forward="false" selection-start-line="185" selection-start-column="75" selection-end-line="185" selection-end-column="75" />
+        <state relative-caret-position="1470">
+          <caret line="200" column="78" lean-forward="false" selection-start-line="200" selection-start-column="78" selection-end-line="200" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
-            <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
-            <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
-            <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
-            <element signature="method#drawX#0;class#test_class#0" expanded="false" />
-            <element signature="method#drawCongratulations#0;class#test_class#0" expanded="false" />
-            <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
-            <element signature="method#dislikeButtonPressed#0;class#test_class#0" expanded="false" />
-            <element signature="method#setItem#0;class#test_class#0" expanded="false" />
+            <element signature="n#!!doc;n#reddrop#0;n#ItemSelector#0" expanded="false" />
+            <element signature="n#!!doc;n#chair_bnb#0;n#ItemSelector#0" expanded="false" />
+            <element signature="n#!!doc;n#chair_Bnb#0;n#ItemSelector#0" expanded="false" />
+            <element signature="method#ItemSelector#0;class#ItemSelector#0" expanded="false" />
+            <element signature="method#StringConverter#0;class#ItemSelector#0" expanded="false" />
           </folding>
         </state>
       </provider>
