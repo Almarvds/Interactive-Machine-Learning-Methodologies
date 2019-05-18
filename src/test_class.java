@@ -28,6 +28,7 @@ public class test_class extends PApplet
     //code elements
     boolean[] disabled = new boolean[0];
     boolean loadedImages;
+    boolean finished;
 
     public static void main(String[]args){
         PApplet.main("test_class",args);
@@ -151,6 +152,7 @@ public class test_class extends PApplet
         itemSelector.couch_Pinc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_pinc.jpg");
 
         itemSelector.couch_Punb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_punb.jpg");
+        itemSelector.couch_Punc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_punc.jpg");
 
         itemSelector.couch_Rnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnb.png");
         itemSelector.couch_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnm.jpg");
@@ -269,6 +271,14 @@ public class test_class extends PApplet
         rect( blocksX, blocksY+((sizeofBlocks+distanceBetweenBlocks)*i), sizeofBlocks, sizeofBlocks, 8);
     }
 
+    //draw congratulations
+    void drawCongratulations(){
+        textAlign(CENTER);
+        textSize(20);
+        fill(0);
+        text("Congratulations, you found the red chair!",largeBlockX + largeBlockSize/2,largeBlockY+ largeBlockSize - ((largeBlockSize-350)/4));
+    }
+
     //disables or enables categories when clicked
     void clickedCategory(int i){
         disabled[i] =! disabled[i];
@@ -285,11 +295,18 @@ public class test_class extends PApplet
         image(dislike, largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60,(largeBlockY+largeBlockSize+30)/2,60,60);
     }
 
-    void likeButtonPressed(){
-        item = itemSelector.returnLikedItem(item, disabled);
+    void likeButtonPressed() {
+        if(!finished) {
+            if (itemSelector.returnLikedItem(item)) {
+                System.out.println("You did it!!!");
+                finished = true;
+                drawCongratulations();
+            }
+        }
     }
 
     void dislikeButtonPressed(){
+        if(!finished)
         setItem(itemSelector.returnDislikedItem(item, disabled));
     }
 

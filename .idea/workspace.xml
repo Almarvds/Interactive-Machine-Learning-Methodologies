@@ -21,26 +21,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_class.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test_class.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="135" column="91" lean-forward="false" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+            <state relative-caret-position="1034">
+              <caret line="304" column="9" lean-forward="false" selection-start-line="304" selection-start-column="9" selection-end-line="304" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setup#0;class#test_class#0" expanded="false" />
+                <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
                 <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
                 <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
+                <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
                 <element signature="method#draw#0;class#test_class#0" expanded="false" />
+                <element signature="method#drawItem#0;class#test_class#0" expanded="false" />
                 <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
+                <element signature="method#drawCategory#0;class#test_class#0" expanded="false" />
                 <element signature="method#hoverCategory#0;class#test_class#0" expanded="false" />
                 <element signature="method#drawX#0;class#test_class#0" expanded="false" />
-                <element signature="e#15206#15207#0" expanded="true" />
-                <element signature="e#15248#15249#0" expanded="true" />
-                <element signature="e#16181#16182#0" expanded="true" />
-                <element signature="e#16253#16254#0" expanded="true" />
+                <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
+                <element signature="method#dislikeButtonPressed#0;class#test_class#0" expanded="false" />
+                <element signature="method#setItem#0;class#test_class#0" expanded="false" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chair_punb.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair_punb.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -54,28 +64,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemSelector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ItemSelector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ItemSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1039">
-              <caret line="198" column="26" lean-forward="false" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
+            <state relative-caret-position="236">
+              <caret line="240" column="6" lean-forward="false" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="n#!!doc;n#reddrop#0;n#ItemSelector#0" expanded="false" />
                 <element signature="n#!!doc;n#chair_bnb#0;n#ItemSelector#0" expanded="false" />
                 <element signature="n#!!doc;n#chair_Bnb#0;n#ItemSelector#0" expanded="false" />
                 <element signature="method#ItemSelector#0;class#ItemSelector#0" expanded="false" />
-                <element signature="method#returnLikedItem#0;class#ItemSelector#0" expanded="false" />
+                <element signature="method#AssignChairs#0;class#ItemSelector#0" expanded="false" />
                 <element signature="method#StringConverter#0;class#ItemSelector#0" expanded="false" />
+                <element signature="method#returnDislikedItem#0;class#ItemSelector#0" expanded="false" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="couch_grnm.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/couches/couch_grnm.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -122,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/Scores.java" />
         <option value="$PROJECT_DIR$/src/Color1.java" />
         <option value="$PROJECT_DIR$/src/Item.java" />
-        <option value="$PROJECT_DIR$/src/test_class.java" />
         <option value="$PROJECT_DIR$/src/ItemSelector.java" />
+        <option value="$PROJECT_DIR$/src/test_class.java" />
       </list>
     </option>
   </component>
@@ -627,7 +631,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -636,16 +640,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test_class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="97" column="54" lean-forward="false" selection-start-line="97" selection-start-column="54" selection-end-line="97" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test_class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -717,11 +711,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair rbb.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair rnm.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -834,39 +823,53 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test_class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="135" column="91" lean-forward="false" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setup#0;class#test_class#0" expanded="false" />
-            <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
-            <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
-            <element signature="method#draw#0;class#test_class#0" expanded="false" />
-            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
-            <element signature="method#hoverCategory#0;class#test_class#0" expanded="false" />
-            <element signature="method#drawX#0;class#test_class#0" expanded="false" />
-            <element signature="e#15206#15207#0" expanded="true" />
-            <element signature="e#15248#15249#0" expanded="true" />
-            <element signature="e#16181#16182#0" expanded="true" />
-            <element signature="e#16253#16254#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair rnm.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/images/furnishing/chairs/chair_punb.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ItemSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="198" column="26" lean-forward="false" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
+        <state relative-caret-position="236">
+          <caret line="240" column="6" lean-forward="false" selection-start-line="240" selection-start-column="6" selection-end-line="240" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="n#!!doc;n#reddrop#0;n#ItemSelector#0" expanded="false" />
             <element signature="n#!!doc;n#chair_bnb#0;n#ItemSelector#0" expanded="false" />
             <element signature="n#!!doc;n#chair_Bnb#0;n#ItemSelector#0" expanded="false" />
             <element signature="method#ItemSelector#0;class#ItemSelector#0" expanded="false" />
-            <element signature="method#returnLikedItem#0;class#ItemSelector#0" expanded="false" />
+            <element signature="method#AssignChairs#0;class#ItemSelector#0" expanded="false" />
             <element signature="method#StringConverter#0;class#ItemSelector#0" expanded="false" />
+            <element signature="method#returnDislikedItem#0;class#ItemSelector#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="304" column="9" lean-forward="false" selection-start-line="304" selection-start-column="9" selection-end-line="304" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setup#0;class#test_class#0" expanded="false" />
+            <element signature="method#setUserProfile#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCategories#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadChairs#0;class#test_class#0" expanded="false" />
+            <element signature="method#loadCouches#0;class#test_class#0" expanded="false" />
+            <element signature="method#draw#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawItem#0;class#test_class#0" expanded="false" />
+            <element signature="method#mousePressed#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawCategory#0;class#test_class#0" expanded="false" />
+            <element signature="method#hoverCategory#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawX#0;class#test_class#0" expanded="false" />
+            <element signature="method#drawLikeandDislike#0;class#test_class#0" expanded="false" />
+            <element signature="method#dislikeButtonPressed#0;class#test_class#0" expanded="false" />
+            <element signature="method#setItem#0;class#test_class#0" expanded="false" />
           </folding>
         </state>
       </provider>
