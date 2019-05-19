@@ -147,101 +147,59 @@ public class ItemSelector extends PApplet{
 
     void AssignChairs(){
 
-        chair_bnb = new Item(chair_Bnb, bluedrop, null, functionChair, Basic,
-                "couch_gnm",  "couch_gnb", "chair_gnm","chair_gnb", "couch_bnm", "couch_bnb", "chair_bnm");
-        chair_bnm = new Item(chair_Bnm, bluedrop, null, functionChair, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        chair_bnb = new Item(chair_Bnb,"couch_gnm",  "couch_gnb", "chair_gnm");
+        chair_bnm = new Item(chair_Bnm,"couch_gnm","chair_bnm", "chair_bnb");
 
-        chair_brnb = new Item(chair_Brnb, browndrop, null, functionChair, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_brnm = new Item(chair_Brnm, browndrop, null, functionChair, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_brnc = new Item(chair_Brnc, browndrop, null, functionChair, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        chair_brnb = new Item(chair_Brnb,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_brnm = new Item(chair_Brnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_brnc = new Item(chair_Brnc,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_gnb = new Item(chair_Gnb, greendrop, null, functionChair, Basic,
-                "couch_pinc", "couch_pinb", "chair_pinc", "chair pinb", "couch_gnm", "chair_gnm", "couch_gnb");
-        chair_gnc = new Item(chair_Gnc, greendrop, null, functionChair, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_gnm = new Item(chair_Gnm, greendrop, null, functionChair, Modern,
-                "couch_pinb", "couch_pinc", "chair_pinc", "chair_pinm", "couch_gnb", "couch_gnm", "chair_gnc");
+        chair_gnb = new Item(chair_Gnb,"couch_pinc", "couch_pinb", "chair_pinc");
+        chair_gnc = new Item(chair_Gnc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_gnm = new Item(chair_Gnm,"couch_pinb", "couch_pinc", "chair_pinc");
 
-        chair_grbrc = new Item(chair_Grbrc, greydrop, browndrop, functionChair, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_grnm = new Item(chair_Grnm, greydrop, null, functionChair, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_yenb", "chair_yenb", "chair_yenb", "chair_bnb");
+        chair_grbrc = new Item(chair_Grbrc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_grnm = new Item(chair_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_pinb = new Item(chair_Pinb,pinkdrop, null, functionChair, Basic,
-                "couch_rnm", "couch_rnb", "chair_rnm", "chair_rbb", "couch_pinc", "couch_pinb", "chair_pinb");
-        chair_pinc = new Item(chair_Pinc, pinkdrop, null, functionChair, Classic,
-                "couch_rnb", "couch_rnm", "chair_rbb", "chair_rnm", "couch_pinm", "couch_pinc", "chair_pinm");
-        chair_pinm = new Item(chair_Pinm, pinkdrop, null, functionChair, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        chair_pinb = new Item(chair_Pinb,"couch_rnm", "couch_rnb", "chair_rnm");
+        chair_pinc = new Item(chair_Pinc,"couch_rnb", "couch_rnm", "chair_rbb");
+        chair_pinm = new Item(chair_Pinm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_punb = new Item(chair_Punb, purpledrop, null, functionChair, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_punc = new Item(chair_Punc, purpledrop, null, functionChair, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        chair_punb = new Item(chair_Punb,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_punc = new Item(chair_Punc,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_yenb = new Item(chair_Yenb, yellowdrop, null, functionChair, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_yenc = new Item(chair_Yenc, yellowdrop, null, functionChair, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        chair_yenm = new Item(chair_Yenm, yellowdrop, null, functionChair, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        chair_yenb = new Item(chair_Yenb,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_yenc = new Item(chair_Yenc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_yenm = new Item(chair_Yenm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_rnm = new Item(chair_Rnm, reddrop, null, functionChair, Modern,
-                "couch yenb", "couch yenm", "chair yenb", "chair yenm", "couch_rbb", "couch_rnm", "chair_rbb");
-        chair_rbb = new Item(chair_Rbb, reddrop, browndrop, functionChair, Basic,
-                "couch yenm", "couch yenb", "chair yenm", "chair yenb", "couch_rnm", "couch_rnb", "chair_rnm");
+        chair_rnm = new Item(chair_Rnm,"couch yenb", "couch yenm", "chair yenb");
+        chair_rbb = new Item(chair_Rbb,"couch yenm", "couch yenb", "chair yenm");
 
         //couches
 
-        couch_bnb = new Item(couch_Bnb, bluedrop, null, functionCouch, Basic,
-                "chair_gnm", "chair yenb", "couch_gnm", "couch_gnb", "chair_bnm", "chair_bnb", "couch_bnm");
-        couch_bnm = new Item(couch_Bnm, bluedrop, null, functionCouch, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_bnb = new Item(couch_Bnb,"chair_gnm", "chair yenb", "couch_gnm");
+        couch_bnm = new Item(couch_Bnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_brnb = new Item(couch_Brnb, browndrop, null, functionCouch, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        couch_brnc = new Item(couch_Brnc, browndrop, null, functionCouch, Classic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_brnb = new Item(couch_Brnb,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_brnc = new Item(couch_Brnc,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_yenb = new Item(couch_Yenb, yellowdrop, null, functionCouch, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        couch_yenm = new Item(couch_Yenm, yellowdrop, null, functionCouch, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_yenb = new Item(couch_Yenb,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_yenm = new Item(couch_Yenm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_gnb = new Item(couch_Gnb, greendrop, null, functionCouch, Basic,
-                "chair_pinc", "chair_pinm", "couch_pinc", "couch_pinb", "chair_gnc", "chair_gnb", "ouch_gnm");
-        couch_gnm = new Item(couch_Gnm, greendrop, null, functionCouch, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_gnb = new Item(couch_Gnb,"chair_pinc", "chair_pinm", "couch_pinc");
+        couch_gnm = new Item(couch_Gnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_grnm = new Item(couch_Grnm, greydrop, null, functionCouch, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_grnm = new Item(couch_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_pinb = new Item(couch_Pinb, pinkdrop, null, functionCouch, Basic,
-                "chair_rbb", "chair rnm", "couch_rnm", "couch_rnb", "chair_pinc", "chair_pinb", "couch_pinc");
-        couch_pinc = new Item(couch_Pinc, pinkdrop, null, functionCouch, Classic,
-                "chair_punc", "chair_punb", "couch_punb", "couch_punc", "chair_pinb", "chair_pinc", "couch_pinb");
+        couch_pinb = new Item(couch_Pinb,"chair_rbb", "chair rnm", "couch_rnm");
+        couch_pinc = new Item(couch_Pinc,"chair_punc", "chair_punb", "couch_punb");
 
-        couch_punb = new Item(couch_Punb, purpledrop, null, functionCouch, Basic,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
-        couch_punc = new Item(couch_Punc, purpledrop, null, functionCouch, Classic,
-                "chair_rbb", "chair_rbb", "couch_rnm", "couch_rnb", "chair_punb", "chair_punc", "couch_punb");
+        couch_punb = new Item(couch_Punb,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_punc = new Item(couch_Punc,"chair_rbb", "chair_rbb", "couch_rnm");
 
-        couch_rnb = new Item(couch_Rnb, reddrop, null, functionCouch, Basic,
-                "chair_yenc", "chair_yenb", "couch_yenm", "couch_yenb", "chair_yenm", "chair_rbb", "couch_rnm");
-        couch_rnm = new Item(couch_Rnm, reddrop, null, functionCouch, Modern,
-                "chair_bnm", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb", "chair_bnb");
+        couch_rnb = new Item(couch_Rnb,"chair_yenc", "chair_yenb", "couch_yenm");
+        couch_rnm = new Item(couch_Rnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-    }
-
-    Boolean returnLikedItem(Item item){
-      System.out.println("LIKED ITEM!");
-        if(item == chair_rbb || item == chair_rnm)
-            return true;
-        return false;
     }
 
     Item StringConverter(String name){
@@ -284,51 +242,17 @@ public class ItemSelector extends PApplet{
         return null;
     }
 
-    Item returnDislikedItem(Item item, boolean[] disabled){
-        System.out.println("DISLIKED ITEM!");
-        if(disabled[0] == false){
-            if(disabled[2]== false){
-                if (disabled [3] == false){
-                    System.out.println("disliked color, type & style: scenario 1");
-                    System.out.println("returning: " + item.Scenario1 + " as new item" );
-                    return StringConverter(item.Scenario1);
-                    //return DislikedColornTypenStyle(item);
-                }
-                System.out.println("disliked color & type: scenario 2");
-                System.out.println("returning: " + item.Scenario2 + " as new item" );
-                return StringConverter(item.Scenario2);
-                //return DislikedColornType(item);
-            }
-            if(disabled [3] == false){
-                System.out.println("disliked color & style: scenario 3");
-                System.out.println("returning: " + item.Scenario3 + " as new item" );
-                return StringConverter(item.Scenario3);
-                //return DislikedColornStyle(item);
-            }
-            System.out.println("disliked color: scenario 4");
-            System.out.println("returning: " + item.Scenario4 + " as new item" );
-            return StringConverter(item.Scenario4);
-            //return DislikedColor(item);
+    Item ItemChosen(Item item, int option){
+        System.out.println("PICKED ITEM!");
+        if(option == 0) {
+            return StringConverter(item.Scenario1);
         }
-        if(disabled[2] == false){
-            if(disabled [3] == false){
-                System.out.println("disliked type & style: scenario 5");
-                System.out.println("returning: " + item.Scenario5 + " as new item" );
-                return StringConverter(item.Scenario5);
-                //return DislikedTypenStyle(item);
-            }
-            System.out.println("disliked type: scenario 6");
-            System.out.println("returning: " + item.Scenario6 + " as new item" );
-            return StringConverter(item.Scenario6);
-            //return DislikedType(item);
+        if(option == 1) {
+            return StringConverter(item.Scenario2);
         }
-        if(disabled[3] == false){
-            System.out.println("disliked style: scenario 7");
-            System.out.println("returning: " + item.Scenario7 + " as new item" );
-            return StringConverter(item.Scenario7);
-            //return DislikedStyle(item);
+        if(option == 2) {
+            return StringConverter(item.Scenario3);
         }
-        System.out.println("disliked nothing: job well done");
         return  item;
     }
 }

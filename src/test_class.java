@@ -20,13 +20,10 @@ public class test_class extends PApplet
     int blocksY;
     int distanceBetweenBlocks;
 
-    Item item = new Item(null,null,null,null,null,null,null,
-            null,null,null,null,null);
+    Item item = new Item(null,null,null,null);
     ItemSelector itemSelector;
 
-
     //code elements
-    boolean[] disabled = new boolean[0];
     boolean loadedImages;
     boolean finished;
 
@@ -64,15 +61,12 @@ public class test_class extends PApplet
         stroke(0);
         rect(largeBlockX,largeBlockY,largeBlockSize,largeBlockSize,10);
 
-        disabled = new boolean[numberofBlocks];
         setUserProfile();
         System.out.println("finished setup");
     }
 
     public void setUserProfile(){
         itemSelector = new ItemSelector();
-        loadCategories();
-        System.out.println("printed categories");
         loadChairs();
         System.out.println("loaded chair images");
         loadCouches();
@@ -80,25 +74,6 @@ public class test_class extends PApplet
         itemSelector.AssignChairs();
         System.out.println("Assigned chair values");
         setItem(itemSelector.couch_bnb);
-    }
-
-    public void loadCategories(){
-        itemSelector.reddrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\red_drop.png");
-        itemSelector.browndrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\brown_drop.png");
-        itemSelector.bluedrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\blue_drop.png");
-        itemSelector.greydrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\grey_drop.png");
-        itemSelector.blackdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\black_drop.png");
-        itemSelector.greendrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\green_drop.png");
-        itemSelector.yellowdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\yellow_drop.png");
-        itemSelector.pinkdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\pink_drop.png");
-        itemSelector.purpledrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\purple_drop.png");
-        itemSelector.Classic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Classic.png");
-        itemSelector.Modern = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Modern.png");
-        itemSelector.Basic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Basic.png");
-        itemSelector.functionChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\chair_icon.png");;
-        itemSelector.functionAccesory = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\lamp.png");;
-        itemSelector.functionCloset = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\closet.png");;
-        itemSelector.functionCouch = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\sofa.png");;
     }
 
     public void loadChairs(){
@@ -160,26 +135,10 @@ public class test_class extends PApplet
 
 
     public void draw(){
-        for(int i=0;i<numberofBlocks;i++){
-            drawCategory(i);
-            if(disabled[i] == true){
-                drawX(i);
-            }
-        }
+
         drawItem();
-        drawLikeandDislike();
 
-        //check mouse for hovering categories
-        if(mouseX>sizeofBlocks && mouseX<sizeofBlocks*2) {
-            for (int i = 0; i < numberofBlocks; i++) {
-                if (mouseY > blocksY + ((sizeofBlocks + distanceBetweenBlocks) * i) && mouseY < blocksY + sizeofBlocks +
-                        ((sizeofBlocks + distanceBetweenBlocks) * i)) {
-                    hoverCategory(i);
-                }
-            }
-        }
-
-        //check mouse for hovering the like and dislike
+        //check mouse for hovering the items
         if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
             if(mouseX>largeBlockX +((((largeBlockSize-350)/2)-60)/2) && mouseX < largeBlockX +((((largeBlockSize-350)/2)-60)/2)+60){
                 fill(240,240,240);
@@ -208,67 +167,25 @@ public class test_class extends PApplet
 
     public void mousePressed(){
 
-        //check if categories are being clicked whenever the mouse clicks
-        if(mouseX>sizeofBlocks && mouseX<sizeofBlocks*2){
-            for(int i=0;i<numberofBlocks;i++){
-                if(mouseY>blocksY+((sizeofBlocks+distanceBetweenBlocks)*i) && mouseY<blocksY+ sizeofBlocks +
-                        ((sizeofBlocks+distanceBetweenBlocks)*i)){
-                    clickedCategory(i);
-                }
-            }
-        }
-
         //check if either the like or dislike button is clicked whenever the mouse clicks
         if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
             if(mouseX>largeBlockX +((((largeBlockSize-350)/2)-60)/2) && mouseX < largeBlockX +((((largeBlockSize-350)/2)-60)/2)+60){
-                likeButtonPressed();
+
             }
             if(mouseX>largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60 && mouseX < largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)){
-                dislikeButtonPressed();
+            }
+
+            if(mouseX>largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60 && mouseX < largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)){
             }
         }
     }
 
-    //draws categories
-    void drawCategory(int i){
-        fill(197,196,194);
-        rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
-        fill(0);
-        textSize(14);
-        if (i==0){
-            textAlign(CENTER);
-            text("Main color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.itemColor1 != null)
-                image(item.itemColor1,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==1){
-            text("Second color",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.itemColor2 != null)
-                image(item.itemColor2,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==2){
-            text("Function",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.functionality != null)
-                image(item.functionality,blocksX+40,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+45,sizeofBlocks-80,sizeofBlocks-60);
-        }
-        if (i==3){
-            text("Style",blocksX+sizeofBlocks/2,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+30);
-            if(item.styling != null)
-                image(item.styling,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
-        }
-    }
+
 
     //draws hover effects
-    void hoverCategory(int i){
+    void hoverItem(int i){
         fill(255,255,255,200);
         rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
-    }
-
-    void drawX(int i){
-        PImage redX = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\redX.png");
-        image(redX,blocksX+30,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i)+40,sizeofBlocks-60,sizeofBlocks-60);
-        fill(0,0,0,180);
-        rect( blocksX, blocksY+((sizeofBlocks+distanceBetweenBlocks)*i), sizeofBlocks, sizeofBlocks, 8);
     }
 
     //draw congratulations
@@ -279,40 +196,13 @@ public class test_class extends PApplet
         text("Congratulations, you found the red chair!",largeBlockX + largeBlockSize/2,largeBlockY+ largeBlockSize - ((largeBlockSize-350)/4));
     }
 
-    //disables or enables categories when clicked
-    void clickedCategory(int i){
-        disabled[i] =! disabled[i];
+    void ItemPressed(int Option) {
+        setItem(itemSelector.ItemChosen(item, Option));
     }
 
-    void drawLikeandDislike(){
-    PImage like = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\likes-02.png");
-        PImage dislike = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\dislikes-02.png");
-        noStroke();
-        fill(220,220,220);
-        circle(largeBlockX +((((largeBlockSize-350)/2)-60)/2)+30,(largeBlockY+largeBlockSize+30)/2+26,80);
-        circle(largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-31,(largeBlockY+largeBlockSize+30)/2+30,80);
-        image(like, largeBlockX +((((largeBlockSize-350)/2)-60)/2),(largeBlockY+largeBlockSize+30)/2,60,60);
-        image(dislike, largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60,(largeBlockY+largeBlockSize+30)/2,60,60);
-    }
-
-    void likeButtonPressed() {
-        if(!finished) {
-            if (itemSelector.returnLikedItem(item)) {
-                System.out.println("You did it!!!");
-                finished = true;
-                drawCongratulations();
-            }
-        }
-    }
-
-    void dislikeButtonPressed(){
-        if(!finished)
-        setItem(itemSelector.returnDislikedItem(item, disabled));
-    }
 
     void setItem(Item SetItem){
         System.out.println(SetItem);
-        System.out.println(itemSelector.chair_bnm.itemColor1);
         System.out.println("setting new item");
         item = SetItem;
         System.out.println("new item set");
