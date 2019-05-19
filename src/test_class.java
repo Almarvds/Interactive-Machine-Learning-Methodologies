@@ -20,7 +20,7 @@ public class test_class extends PApplet
     int blocksY;
     int distanceBetweenBlocks;
 
-    Item item = new Item(null,null,null,null,null,null,null);
+    Item item = new Item(null,null,null);
     ItemSelector itemSelector;
 
 
@@ -70,8 +70,6 @@ public class test_class extends PApplet
 
     public void setUserProfile(){
         itemSelector = new ItemSelector();
-        loadCategories();
-        System.out.println("printed categories");
         loadChairs();
         System.out.println("loaded chair images");
         loadCouches();
@@ -79,25 +77,6 @@ public class test_class extends PApplet
         itemSelector.AssignChairs();
         System.out.println("Assigned chair values");
         setItem(itemSelector.couch_bnb);
-    }
-
-    public void loadCategories(){
-        itemSelector.reddrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\red_drop.png");
-        itemSelector.browndrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\brown_drop.png");
-        itemSelector.bluedrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\blue_drop.png");
-        itemSelector.greydrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\grey_drop.png");
-        itemSelector.blackdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\black_drop.png");
-        itemSelector.greendrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\green_drop.png");
-        itemSelector.yellowdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\yellow_drop.png");
-        itemSelector.pinkdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\pink_drop.png");
-        itemSelector.purpledrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\purple_drop.png");
-        itemSelector.Classic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Classic.png");
-        itemSelector.Modern = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Modern.png");
-        itemSelector.Basic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Basic.png");
-        itemSelector.functionChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\chair_icon.png");;
-        itemSelector.functionAccesory = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\lamp.png");;
-        itemSelector.functionCloset = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\closet.png");;
-        itemSelector.functionCouch = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\sofa.png");;
     }
 
     public void loadChairs(){
@@ -238,7 +217,6 @@ public class test_class extends PApplet
 
     void setItem(Item SetItem){
         System.out.println(SetItem);
-        System.out.println(itemSelector.chair_bnm.itemColor1);
         System.out.println("setting new item");
         item = SetItem;
         System.out.println("new item set");

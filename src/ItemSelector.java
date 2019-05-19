@@ -147,57 +147,57 @@ public class ItemSelector extends PApplet{
 
     void AssignChairs(){
 
-        chair_bnb = new Item(chair_Bnb, bluedrop, null, functionChair, Basic, "couch_gnm", "couch_gnb");
-        chair_bnm = new Item(chair_Bnm, bluedrop, null, functionChair, Modern, "couch_gnm", "couch_gnb");
+        chair_bnb = new Item(chair_Bnb,"couch_gnm", "couch_gnb");
+        chair_bnm = new Item(chair_Bnm,"couch_gnm", "couch_gnb");
 
-        chair_brnb = new Item(chair_Brnb, browndrop, null, functionChair, Basic, "couch_gnm", "couch_gnb");
-        chair_brnm = new Item(chair_Brnm, browndrop, null, functionChair, Modern, "chair pinb", "chair_grnm");
-        chair_brnc = new Item(chair_Brnc, browndrop, null, functionChair, Classic, "chair pinb", "chair_grnm");
+        chair_brnb = new Item(chair_Brnb,"couch_gnm", "couch_gnb");
+        chair_brnm = new Item(chair_Brnm,"chair pinb", "chair_grnm");
+        chair_brnc = new Item(chair_Brnc, "chair pinb", "chair_grnm");
 
-        chair_gnb = new Item(chair_Gnb, greendrop, null, functionChair, Basic, "chair_gnc", "couch_pinc");
-        chair_gnc = new Item(chair_Gnc, greendrop, null, functionChair, Classic, "chair_gnm", "chair_pinc");
-        chair_gnm = new Item(chair_Gnm, greendrop, null, functionChair, Modern, "couch_gnm", "couch_gnb");
+        chair_gnb = new Item(chair_Gnb, "chair_gnc", "couch_pinc");
+        chair_gnc = new Item(chair_Gnc, "chair_gnm", "chair_pinc");
+        chair_gnm = new Item(chair_Gnm,  "couch_gnm", "couch_gnb");
 
-        chair_grbrc = new Item(chair_Grbrc, greydrop, browndrop, functionChair, Classic, "couch_gnm", "couch_gnb");
-        chair_grnm = new Item(chair_Grnm, greydrop, null, functionChair, Modern, "chair_grbrc", "chair_punc");
+        chair_grbrc = new Item(chair_Grbrc,"couch_gnm", "couch_gnb");
+        chair_grnm = new Item(chair_Grnm, "chair_grbrc", "chair_punc");
 
-        chair_pinb = new Item(chair_Pinb,pinkdrop, null, functionChair, Basic, "chair_pinc", "chair_punc");
-        chair_pinc = new Item(chair_Pinc, pinkdrop, null, functionChair, Classic, "chair_rnm", "chair_rbb");
-        chair_pinm = new Item(chair_Pinm, pinkdrop, null, functionChair, Modern, "couch_rnm", "couch_gnb");
+        chair_pinb = new Item(chair_Pinb, "chair_pinc", "chair_punc");
+        chair_pinc = new Item(chair_Pinc,"chair_rnm", "chair_rbb");
+        chair_pinm = new Item(chair_Pinm,"couch_rnm", "couch_gnb");
 
-        chair_punb = new Item(chair_Punb, purpledrop, null, functionChair, Basic, "chair pinb", "chair_brnm");
-        chair_punc = new Item(chair_Punc, purpledrop, null, functionChair, Classic, "chair_rnm", "chair_rbb");
+        chair_punb = new Item(chair_Punb,  "chair pinb", "chair_brnm");
+        chair_punc = new Item(chair_Punc,  "chair_rnm", "chair_rbb");
 
-        chair_yenb = new Item(chair_Yenb, yellowdrop, null, functionChair, Basic, "couch_gnm", "couch_gnb");
-        chair_yenc = new Item(chair_Yenc, yellowdrop, null, functionChair, Classic, "couch_gnm", "couch_gnb");
-        chair_yenm = new Item(chair_Yenm, yellowdrop, null, functionChair, Modern, "couch_gnm", "couch_gnb");
+        chair_yenb = new Item(chair_Yenb,"couch_gnm", "couch_gnb");
+        chair_yenc = new Item(chair_Yenc,"couch_gnm", "couch_gnb");
+        chair_yenm = new Item(chair_Yenm,"couch_gnm", "couch_gnb");
 
-        chair_rnm = new Item(chair_Rnm, reddrop, null, functionChair, Modern, "couch_gnm", "couch_gnb");
-        chair_rbb = new Item(chair_Rbb, reddrop, browndrop, functionChair, Basic, "couch_gnm", "couch_gnb");
+        chair_rnm = new Item(chair_Rnm, "couch_gnm", "couch_gnb");
+        chair_rbb = new Item(chair_Rbb,"couch_gnm", "couch_gnb");
         //couches
 
-        couch_bnb = new Item(couch_Bnb, bluedrop, null, functionCouch, Basic, "couch_bnm", "couch yenm");
-        couch_bnm = new Item(couch_Bnm, bluedrop, null, functionCouch, Modern, "couch_gnm", "couch yenb");
+        couch_bnb = new Item(couch_Bnb, "couch_bnm", "couch yenm");
+        couch_bnm = new Item(couch_Bnm, "couch_gnm", "couch yenb");
 
-        couch_brnb = new Item(couch_Brnb, browndrop, null, functionCouch, Basic, "couch_gnm", "couch_gnb");
-        couch_brnc = new Item(couch_Brnc, browndrop, null, functionCouch, Classic, "couch_gnm", "couch_gnb");
+        couch_brnb = new Item(couch_Brnb,  "couch_gnm", "couch_gnb");
+        couch_brnc = new Item(couch_Brnc, "couch_gnm", "couch_gnb");
 
-        couch_yenb = new Item(couch_Yenb, yellowdrop, null, functionCouch, Basic, "couch yenm", "couch_gnb");
-        couch_yenm = new Item(couch_Yenm, yellowdrop, null, functionCouch, Modern, "couch_gnm", "chair_punb");
+        couch_yenb = new Item(couch_Yenb, "couch yenm", "couch_gnb");
+        couch_yenm = new Item(couch_Yenm, "couch_gnm", "chair_punb");
 
-        couch_gnb = new Item(couch_Gnb, greendrop, null, functionCouch, Basic, "couch_gnm", "chair_punb");
-        couch_gnm = new Item(couch_Gnm, greendrop, null, functionCouch, Modern, "couch_gnb", "chair_brnc");
+        couch_gnb = new Item(couch_Gnb, "couch_gnm", "chair_punb");
+        couch_gnm = new Item(couch_Gnm, "couch_gnb", "chair_brnc");
 
-        couch_grnm = new Item(couch_Grnm, greydrop, null, functionCouch, Modern, "couch_gnm", "couch_gnb");
+        couch_grnm = new Item(couch_Grnm, "couch_gnm", "couch_gnb");
 
-        couch_pinb = new Item(couch_Pinb, pinkdrop, null, functionCouch, Basic, "couch_gnm", "couch_gnb");
-        couch_pinc = new Item(couch_Pinc, pinkdrop, null, functionCouch, Classic, "chair_pinc", "couch_brnb");
+        couch_pinb = new Item(couch_Pinb,"couch_gnm", "couch_gnb");
+        couch_pinc = new Item(couch_Pinc, "chair_pinc", "couch_brnb");
 
-        couch_punb = new Item(couch_Punb, purpledrop, null, functionCouch, Basic, "couch_gnm", "couch_gnb");
-        couch_punc = new Item(couch_Punc, purpledrop, null, functionCouch, Classic, "couch_gnm", "couch_gnb");
+        couch_punb = new Item(couch_Punb, "couch_gnm", "couch_gnb");
+        couch_punc = new Item(couch_Punc, "couch_gnm", "couch_gnb");
 
-        couch_rnb = new Item(couch_Rnb, reddrop, null, functionCouch, Basic, "couch_gnm", "couch_gnb");
-        couch_rnm = new Item(couch_Rnm, reddrop, null, functionCouch, Modern, "couch_gnm", "couch_gnb");
+        couch_rnb = new Item(couch_Rnb, "couch_gnm", "couch_gnb");
+        couch_rnm = new Item(couch_Rnm, "couch_gnm", "couch_gnb");
     }
 
     Item returnLikedItem(Item item){
