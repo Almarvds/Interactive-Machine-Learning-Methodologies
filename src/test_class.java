@@ -222,11 +222,13 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed() {
-        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished)
+        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished) {
             finished = true;
             drawCongratulations();
-        if(!finished)
-            setItem(itemSelector.returnDislikedItem(item));
+        }
+        if(!finished) {
+            setItem(itemSelector.returnLikedItem(item));
+        }
     }
 
     void dislikeButtonPressed(){
