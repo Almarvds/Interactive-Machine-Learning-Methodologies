@@ -7,25 +7,16 @@ import java.util.Set;
 
 public class test_class extends PApplet
 {
-
-    //core measurements
-    int largeBlockSize;
-    int numberofBlocks;
-
-    //secondary measurements
-    int sizeofBlocks;
-    int largeBlockX;
-    int largeBlockY;
-    int blocksX;
-    int blocksY;
-    int distanceBetweenBlocks;
-
-    Item item = new Item(null,null,null,null);
+    Item item1 = new Item(null,null,null,null);
+    Item item2 = new Item(null,null,null,null);
+    Item item3 = new Item(null,null,null,null);
     ItemSelector itemSelector;
 
     //code elements
     boolean loadedImages;
+    boolean firstOneDone;
     boolean finished;
+    int imageSize = 300;
 
     public static void main(String[]args){
         PApplet.main("test_class",args);
@@ -35,12 +26,7 @@ public class test_class extends PApplet
         size(1152,864);
     }
 
-
     public void setup(){
-
-        largeBlockSize = 650;
-        numberofBlocks = 4;
-
         PImage backgroundRoom = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\rooms\\Room1.jpg");
         background(backgroundRoom);
         noStroke();
@@ -48,18 +34,6 @@ public class test_class extends PApplet
         rect(0,0,width,height);
         fill(30,30,30);
         rect(0,0,width,60);
-
-        sizeofBlocks = (width-largeBlockSize)/4;
-        largeBlockX = ((width-largeBlockSize)/4)*3;
-        largeBlockY = (height-largeBlockSize)/2;
-        blocksX = sizeofBlocks;
-        blocksY = largeBlockY;
-        distanceBetweenBlocks = (largeBlockSize - (numberofBlocks*sizeofBlocks))/(numberofBlocks-1) ;
-
-        fill(240,240,240,200);
-        strokeWeight(5);
-        stroke(0);
-        rect(largeBlockX,largeBlockY,largeBlockSize,largeBlockSize,10);
 
         setUserProfile();
         System.out.println("finished setup");
@@ -73,7 +47,9 @@ public class test_class extends PApplet
         System.out.println("loaded couch images");
         itemSelector.AssignChairs();
         System.out.println("Assigned chair values");
-        setItem(itemSelector.couch_bnb);
+        setItem(itemSelector.couch_gnb,0);
+        setItem(itemSelector.couch_brnb,1);
+        setItem(itemSelector.chair_bnm,2);
     }
 
     public void loadChairs(){
@@ -110,7 +86,7 @@ public class test_class extends PApplet
 
     public void loadCouches(){
         itemSelector.couch_Bnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_bnb.jpg");
-        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
+        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_bnm.jpg");
 
         itemSelector.couch_Brnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnb.jpg");
         itemSelector.couch_Brnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
@@ -133,78 +109,84 @@ public class test_class extends PApplet
         itemSelector.couch_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnm.jpg");
     }
 
-
     public void draw(){
 
         drawItem();
 
         //check mouse for hovering the items
-        if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
-            if(mouseX>largeBlockX +((((largeBlockSize-350)/2)-60)/2) && mouseX < largeBlockX +((((largeBlockSize-350)/2)-60)/2)+60){
-                fill(240,240,240);
-                circle(largeBlockX +((((largeBlockSize-350)/2)-60)/2)+30,(largeBlockY+largeBlockSize+30)/2+26,80);
-                PImage like = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\like-01.png");
-                image(like, largeBlockX +((((largeBlockSize-350)/2)-60)/2),(largeBlockY+largeBlockSize+30)/2,60,60);
-            }
-            if(mouseX>largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60 && mouseX < largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)){
-                fill(240,240,240);
-                circle(largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-31,(largeBlockY+largeBlockSize+30)/2+30,80);
-                PImage dislike = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\buttons\\dislike-01.png");
-                image(dislike, largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60,(largeBlockY+largeBlockSize+30)/2,60,60);
+
+        if((mouseY>(height-imageSize)/2 && mouseY<((height-imageSize)/2)+imageSize)&&!finished){
+            fill(255,255,255,150);
+            {
+                for(int i=0;i<3;i++){
+                    if(mouseX>(width-(3*imageSize))/4 + ((imageSize+(width-(3*imageSize))/4)*i) && mouseX<
+                            (width-(3*imageSize))/4 + ((imageSize+(width-(3*imageSize))/4)*i)+imageSize){
+                        rect((width-(3*imageSize))/4 + ((imageSize+(width-(3*imageSize))/4)*i), (height-imageSize)/2, imageSize, imageSize);
+                    }
+                }
             }
         }
+
     }
 
     private void drawItem() {
+        fill(0);
+        rect((width-(3*imageSize))/4 - 3, (height-imageSize)/2 - 3,imageSize + 6, imageSize + 6, 2);
+        image(item1.itemImage, (width-(3*imageSize))/4, (height-imageSize)/2, imageSize, imageSize);
 
-        int imageSize = 350;
-        rect(largeBlockX - 3 + (largeBlockSize-imageSize)/2 ,largeBlockY - 3 + (largeBlockSize-imageSize)/2 ,
-                imageSize +6 ,imageSize + 6,2);
-        image(item.itemImage,largeBlockX +(largeBlockSize-imageSize)/2,largeBlockY+(largeBlockSize-imageSize)/2,
-                imageSize,imageSize);
+        rect((((width-(3*imageSize))/4)*2)+imageSize - 3, (height-imageSize)/2 - 3,imageSize + 6, imageSize + 6, 2);
+        image(item2.itemImage, (((width-(3*imageSize))/4)*2)+imageSize, (height-imageSize)/2, imageSize, imageSize);
 
+        rect(width-imageSize-(width-(3*imageSize))/4 - 3, (height-imageSize)/2 - 3,imageSize + 6, imageSize + 6, 2);
+        image(item3.itemImage, width-imageSize-(width-(3*imageSize))/4, (height-imageSize)/2, imageSize, imageSize);
     }
 
     public void mousePressed(){
-
-        //check if either the like or dislike button is clicked whenever the mouse clicks
-        if(mouseY>(largeBlockY+largeBlockSize+30)/2 && mouseY < (largeBlockY+largeBlockSize+30)/2+60){
-            if(mouseX>largeBlockX +((((largeBlockSize-350)/2)-60)/2) && mouseX < largeBlockX +((((largeBlockSize-350)/2)-60)/2)+60){
-
-            }
-            if(mouseX>largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60 && mouseX < largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)){
-            }
-
-            if(mouseX>largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)-60 && mouseX < largeBlockX+largeBlockSize-((((largeBlockSize-350)/2)-60)/2)){
+        if((mouseY>(height-imageSize)/2 && mouseY<((height-imageSize)/2)+imageSize)&& !finished){
+            {
+                for(int i=0;i<3;i++){
+                    if(mouseX>(width-(3*imageSize))/4 + ((imageSize+(width-(3*imageSize))/4)*i) && mouseX<
+                            (width-(3*imageSize))/4 + ((imageSize+(width-(3*imageSize))/4)*i)+imageSize){
+                        ItemPressed(i);
+                    }
+                }
             }
         }
-    }
-
-
-
-    //draws hover effects
-    void hoverItem(int i){
-        fill(255,255,255,200);
-        rect(blocksX,blocksY+((sizeofBlocks+distanceBetweenBlocks)*i),sizeofBlocks,sizeofBlocks,10);
     }
 
     //draw congratulations
     void drawCongratulations(){
         textAlign(CENTER);
         textSize(20);
-        fill(0);
-        text("Congratulations, you found the red chair!",largeBlockX + largeBlockSize/2,largeBlockY+ largeBlockSize - ((largeBlockSize-350)/4));
+        fill(255);
+        text("Congratulations, you found the red chair!",width/2,(((height-imageSize)/2)+imageSize)+((height-imageSize)/4));
     }
 
     void ItemPressed(int Option) {
-        setItem(itemSelector.ItemChosen(item, Option));
+        Item item = null;
+        if(Option == 0){ item = item1; }
+        if(Option == 1){ item = item2; }
+        if(Option == 2){ item = item3; }
+
+        if(item == itemSelector.chair_rnm || item == itemSelector.chair_rbb){
+            drawCongratulations();
+            finished = true;
+        }
+
+        if(!finished){
+            Item[] items = itemSelector.ItemChosen(item);
+            for (int i = 0; i < 3; i++) {
+                setItem(items[i], i);
+            }
+        }
     }
 
-
-    void setItem(Item SetItem){
+    void setItem(Item SetItem, int itemNumber){
         System.out.println(SetItem);
         System.out.println("setting new item");
-        item = SetItem;
+        if(itemNumber == 0){item1 = SetItem;}
+        if(itemNumber == 1){item2 = SetItem;}
+        if(itemNumber == 2){item3 = SetItem;}
         System.out.println("new item set");
     }
 

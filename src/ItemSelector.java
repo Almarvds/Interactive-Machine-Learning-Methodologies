@@ -147,28 +147,28 @@ public class ItemSelector extends PApplet{
 
     void AssignChairs(){
 
-        chair_bnb = new Item(chair_Bnb,"couch_gnm",  "couch_gnb", "chair_gnm");
-        chair_bnm = new Item(chair_Bnm,"couch_gnm","chair_bnm", "chair_bnb");
+        chair_bnb = new Item(chair_Bnb,"chair_gnm",  "chair_gnb", "chair_grbrc");
+        chair_bnm = new Item(chair_Bnm,"chair_bnb","couch_bnm", "chair yenb");
 
-        chair_brnb = new Item(chair_Brnb,"chair_bnm", "chair_bnb", "chair_bnb");
-        chair_brnm = new Item(chair_Brnm,"chair_bnm", "chair_bnb", "chair_bnb");
-        chair_brnc = new Item(chair_Brnc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_brnb = new Item(chair_Brnb,"chair_brnm", "chair_rbb", "chair_brnc");
+        chair_brnm = new Item(chair_Brnm,"chair_brnc", "chair_rnm", "chair_punb");
+        chair_brnc = new Item(chair_Brnc,"couch_brnb", "chair_punb", "chair_punc");
 
-        chair_gnb = new Item(chair_Gnb,"couch_pinc", "couch_pinb", "chair_pinc");
-        chair_gnc = new Item(chair_Gnc,"chair_bnm", "chair_bnb", "chair_bnb");
-        chair_gnm = new Item(chair_Gnm,"couch_pinb", "couch_pinc", "chair_pinc");
+        chair_gnb = new Item(chair_Gnb,"chair yenb", "chair_pinc", "chair_gnc");
+        chair_gnc = new Item(chair_Gnc,"chair_bnm", "chair_bnb", "chair_punb");
+        chair_gnm = new Item(chair_Gnm,"chair yenb", "chair_pinc", "chair_gnc");
 
-        chair_grbrc = new Item(chair_Grbrc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_grbrc = new Item(chair_Grbrc,"chair pinb", "couch_grnm", "chair yenc");
         chair_grnm = new Item(chair_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        chair_pinb = new Item(chair_Pinb,"couch_rnm", "couch_rnb", "chair_rnm");
-        chair_pinc = new Item(chair_Pinc,"couch_rnb", "couch_rnm", "chair_rbb");
-        chair_pinm = new Item(chair_Pinm,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_pinb = new Item(chair_Pinb,"chair_pinc", "chair_pinm", "chair_punb");
+        chair_pinc = new Item(chair_Pinc,"couch_pinc", "chair_punc", "chair_rbb");
+        chair_pinm = new Item(chair_Pinm,"chair_punc", "couch_pinb", "chair_rnm");
 
-        chair_punb = new Item(chair_Punb,"chair_bnm", "chair_bnb", "chair_bnb");
-        chair_punc = new Item(chair_Punc,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_punb = new Item(chair_Punb,"chair_rbb", "chair_punc", "couch_punb");
+        chair_punc = new Item(chair_Punc,"chair_rbb", "chair_rnm", "couch_punc");
 
-        chair_yenb = new Item(chair_Yenb,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_yenb = new Item(chair_Yenb,"chair yenc", "chair yenm", "chair pinb");
         chair_yenc = new Item(chair_Yenc,"chair_bnm", "chair_bnb", "chair_bnb");
         chair_yenm = new Item(chair_Yenm,"chair_bnm", "chair_bnb", "chair_bnb");
 
@@ -178,27 +178,27 @@ public class ItemSelector extends PApplet{
         //couches
 
         couch_bnb = new Item(couch_Bnb,"chair_gnm", "chair yenb", "couch_gnm");
-        couch_bnm = new Item(couch_Bnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_bnm = new Item(couch_Bnm,"chair_bnm", "couch_bnb", "couch yenb");
 
-        couch_brnb = new Item(couch_Brnb,"chair_bnm", "chair_bnb", "chair_bnb");
-        couch_brnc = new Item(couch_Brnc,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_brnb = new Item(couch_Brnb,"couch_brnc", "couch_punb", "chair_brnb");
+        couch_brnc = new Item(couch_Brnc,"chair_brnm", "couch_punb", "chair_brnc");
 
         couch_yenb = new Item(couch_Yenb,"chair_bnm", "chair_bnb", "chair_bnb");
         couch_yenm = new Item(couch_Yenm,"chair_bnm", "chair_bnb", "chair_bnb");
 
-        couch_gnb = new Item(couch_Gnb,"chair_pinc", "chair_pinm", "couch_pinc");
-        couch_gnm = new Item(couch_Gnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_gnb = new Item(couch_Gnb,"couch_gnm", "couch_bnb", "chair_gnb");
+        couch_gnm = new Item(couch_Gnm,"couch_bnm", "chair_bnb", "couch yenm");
 
         couch_grnm = new Item(couch_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
 
         couch_pinb = new Item(couch_Pinb,"chair_rbb", "chair rnm", "couch_rnm");
         couch_pinc = new Item(couch_Pinc,"chair_punc", "chair_punb", "couch_punb");
 
-        couch_punb = new Item(couch_Punb,"chair_bnm", "chair_bnb", "chair_bnb");
-        couch_punc = new Item(couch_Punc,"chair_rbb", "chair_rbb", "couch_rnm");
+        couch_punb = new Item(couch_Punb,"chair_punb", "couch_punc", "chair_punc");
+        couch_punc = new Item(couch_Punc,"couch_rnb", "chair_pinc", "couch_rnm");
 
-        couch_rnb = new Item(couch_Rnb,"chair_yenc", "chair_yenb", "couch_yenm");
-        couch_rnm = new Item(couch_Rnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_rnb = new Item(couch_Rnb,"couch yenb", "chair_rbb", "couch_rnm");
+        couch_rnm = new Item(couch_Rnm,"couch_rnb", "chair_rnm", "chair_rbb");
 
     }
 
@@ -236,23 +236,19 @@ public class ItemSelector extends PApplet{
          if (name == "couch_pinb"){ return couch_pinb;}
          if (name == "couch_pinc"){ return couch_pinc;}
          if (name == "couch_punb"){ return couch_punb;}
-         if (name == "couch_rnb"){ return couch_rnb;}
+        if (name == "couch_punc"){ return couch_punc;}
+        if (name == "couch_rnb"){ return couch_rnb;}
          if (name == "couch_rnm"){ return couch_rnm;}
 
         return null;
     }
 
-    Item ItemChosen(Item item, int option){
+    Item[] ItemChosen(Item item){
+        Item[] items= new Item[3];
+        items[0] = StringConverter(item.Scenario1);
+        items[1] = StringConverter(item.Scenario2);
+        items[2] = StringConverter(item.Scenario3);
         System.out.println("PICKED ITEM!");
-        if(option == 0) {
-            return StringConverter(item.Scenario1);
-        }
-        if(option == 1) {
-            return StringConverter(item.Scenario2);
-        }
-        if(option == 2) {
-            return StringConverter(item.Scenario3);
-        }
-        return  item;
+        return items;
     }
 }
