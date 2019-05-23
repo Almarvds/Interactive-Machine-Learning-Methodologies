@@ -227,36 +227,48 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed() {
+        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished) {
+            finished = true;
+            drawCongratulations();
+            return;
+        }
         if(textItem) {
             System.out.println("liked variable");
             textItem = false;
             newItem(true);
         } else{
-            System.out.println("liked");
+            System.out.println("like pressed");
             choseItem("like");
         }
     }
 
     void dislikeButtonPressed(){
+        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished) {
+            finished = true;
+            drawCongratulations();
+            return;
+        }
         if(textItem) {
             System.out.println("disliked variable");
             textItem = false;
             newItem(false);
         } else{
-            System.out.println("disliked");
+            System.out.println("dislike pressed");
             choseItem("Dislike");
         }
     }
 
     void choseItem(String likeOrDislike){
-        if(textItem == false) {
-            System.out.println("new textItem");
-            textItem = true;
-        }
-        if(likeOrDislike == "like"){
-            likeDislike = "like";
-        } else{
-            likeDislike = "dislike";
+        if(!finished) {
+            if (textItem == false) {
+                System.out.println("new textItem");
+                textItem = true;
+            }
+            if (likeOrDislike == "like") {
+                likeDislike = "like";
+            } else {
+                likeDislike = "dislike";
+            }
         }
     }
 
@@ -265,22 +277,18 @@ public class test_class extends PApplet
         strokeWeight(5);
         stroke(0);
         int imageSize = 350;
-        int categorySize = 50;
+        int categorySize = 75;
         rect(largeBlockX -2 + (largeBlockSize-imageSize)/2 ,largeBlockY - 2 + (largeBlockSize-imageSize)/2 ,
                 imageSize +4 ,imageSize + 4,2);
         fill(0);
         textSize(25);
-        image(item.variable,(width/2)-(categorySize/2),largeBlockY+(largeBlockSize/2)-20-categorySize/2,
+        image(item.variable,(width/2)-(categorySize/2),largeBlockY+(largeBlockSize/2)-30-categorySize/2,
                 categorySize,categorySize*3/2);
         textAlign(CENTER);
         text(TextLine,largeBlockX +((largeBlockSize-imageSize)/2)+5, largeBlockY+imageSize+(largeBlockSize-imageSize)/4-20,imageSize,100);
     }
 
     void newItem(boolean likeOrDislike){
-        if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished) {
-            finished = true;
-            drawCongratulations();
-        }
         if(!finished && likeOrDislike) {
             setItem(itemSelector.returnLikedItem(item,likeDislike));
         }

@@ -147,10 +147,10 @@ public class ItemSelector extends PApplet{
 
     void AssignChairs(){
 
-        chair_bnb = new Item(chair_Bnb,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
-        chair_bnm = new Item(chair_Bnm,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_bnb = new Item(chair_Bnb,"function", functionChair,"couch_bnm", "chair yenb",
+                "chair_bnm","couch_bnb");
+        chair_bnm = new Item(chair_Bnm,"color", bluedrop,"chair_gnm", "couch_bnb",
+                "chair_bnb","chair yenb");
 
         chair_brnb = new Item(chair_Brnb,"color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
@@ -163,30 +163,30 @@ public class ItemSelector extends PApplet{
                 "couch_bnm","couch_gnb");
         chair_gnc = new Item(chair_Gnc, "color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
-        chair_gnm = new Item(chair_Gnm,  "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_gnm = new Item(chair_Gnm,  "style", Modern,"chair_punc", "chair_rnm",
+                "chair_grnm","couch_gnb");
 
-        chair_grbrc = new Item(chair_Grbrc,"color", bluedrop,"couch_gnm", "chair_bnb",
+        chair_grbrc = new Item(chair_Grbrc,"style", Classic,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
-        chair_grnm = new Item(chair_Grnm, "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_grnm = new Item(chair_Grnm, "color", greydrop,"chair_rnm", "chair pinb",
+                "chair pinb","couch_gnb");
 
-        chair_pinb = new Item(chair_Pinb, "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
-        chair_pinc = new Item(chair_Pinc,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_pinb = new Item(chair_Pinb, "color", pinkdrop,"chair_rbb", "chair_rnm",
+                "chair_pinc","chair_rbb");
+        chair_pinc = new Item(chair_Pinc,"style", Classic,"chair_punb", "chair_punc",
+                "chair pinb","chair_punb");
         chair_pinm = new Item(chair_Pinm,"color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
-        chair_punb = new Item(chair_Punb,  "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
-        chair_punc = new Item(chair_Punc,  "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_punb = new Item(chair_Punb,  "style", Basic,"chair_rnm", "chair_rbb",
+                "chair_punc","chair_rnm");
+        chair_punc = new Item(chair_Punc,  "color", purpledrop,"chair_rbb", "chair_punb",
+                "chair_pinc","chair_rnm");
 
-        chair_yenb = new Item(chair_Yenb,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
-        chair_yenc = new Item(chair_Yenc,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        chair_yenb = new Item(chair_Yenb,"color", yellowdrop,"chair_pinc", "chair yenc",
+                "chair yenc","couch_gnm");
+        chair_yenc = new Item(chair_Yenc,"color", yellowdrop,"chair_rnm", "chair_yenb",
+                "chair_punc","chair_punb");
         chair_yenm = new Item(chair_Yenm,"color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
@@ -199,7 +199,7 @@ public class ItemSelector extends PApplet{
         couch_bnb = new Item(couch_Bnb,"color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnm");
         couch_bnm = new Item(couch_Bnm, "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+                "couch_bnb","couch_gnb");
 
         couch_brnb = new Item(couch_Brnb, "color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
@@ -211,16 +211,16 @@ public class ItemSelector extends PApplet{
         couch_yenm = new Item(couch_Yenm,"color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
-        couch_gnb = new Item(couch_Gnb, "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
-        couch_gnm = new Item(couch_Gnm, "color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        couch_gnb = new Item(couch_Gnb, "function", functionCouch,"chair_gnm", "couch_bnb",
+                "couch_gnm","chair yenb");
+        couch_gnm = new Item(couch_Gnm, "function", functionCouch,"chair_gnm", "couch_pinb",
+                "couch_gnb","chair yenb");
 
         couch_grnm = new Item(couch_Grnm, "color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
-        couch_pinb = new Item(couch_Pinb,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+        couch_pinb = new Item(couch_Pinb,"function", functionCouch,"chair_pinb", "couch_gnm",
+                "couch_pinc","chair yenb");
         couch_pinc = new Item(couch_Pinc, "color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
