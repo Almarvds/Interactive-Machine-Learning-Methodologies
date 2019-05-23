@@ -7,12 +7,20 @@ import processing.core.PApplet;
 public class Item extends PApplet{
 
     public PImage itemImage;
+    public PImage variable;
+    public String typeOfVariable;
     public String Like;
     public String Dislike;
+    public String likeVariable;
+    public String dislikeVariable;
 
-    Item(PImage currentItemImage, String scenario1, String scenario2){
+    Item(PImage currentItemImage, String tOV_, PImage variable_, String likeDislike, String DislikeLike, String likeLike, String dislikeDislike){
         itemImage = currentItemImage;
-        Like = scenario1;
-        Dislike = scenario2;
+        variable = variable_;
+        typeOfVariable = tOV_;
+        Like = likeLike;
+        Dislike = dislikeDislike;
+        likeVariable = likeLike;
+        dislikeVariable = dislikeDislike;
     }
 }

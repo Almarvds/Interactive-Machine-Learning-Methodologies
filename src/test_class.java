@@ -20,7 +20,7 @@ public class test_class extends PApplet
     int blocksY;
     int distanceBetweenBlocks;
 
-    Item item = new Item(null,null,null);
+    Item item = new Item(null,null,null, null,null,null,null);
     ItemSelector itemSelector;
 
 
@@ -28,6 +28,8 @@ public class test_class extends PApplet
     boolean[] disabled = new boolean[0];
     boolean loadedImages;
     boolean finished;
+    private boolean textItem;
+    String likeDislike;
 
     public static void main(String[]args){
         PApplet.main("test_class",args);
@@ -139,7 +141,11 @@ public class test_class extends PApplet
 
     public void draw(){
 
-        drawItem();
+        if(!textItem) {
+            drawItem();
+        } else {
+            drawTextItem();
+        }
         drawLikeandDislike();
 
         //check mouse for hovering the like and dislike
@@ -201,18 +207,63 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed() {
+        System.out.println("liked");
+        System.out.println(item.variable);
+        if(textItem) {
+            textItem = false;
+            newItem(true);
+        }
+        choseItem("like");
+    }
+
+    void dislikeButtonPressed(){
+        System.out.println("disliked");
+        System.out.println(item.variable);
+        if(textItem) {
+            textItem = false;
+            newItem(false);
+        }
+        choseItem("Dislike");
+        if(!finished)
+            setItem(itemSelector.returnDislikedItem(item));
+    }
+
+    void choseItem(String likeOrDislike){
+        textItem = true;
+        if(likeOrDislike == "like"){
+            likeDislike = "like";
+        } else{
+            likeDislike = "dislike";
+        }
+    }
+
+    void drawTextItem(){
+        String TextLine = "did you " + likeDislike + " it because it has this " + item.typeOfVariable + "?";
+        System.out.println(TextLine);
+        strokeWeight(5);
+        stroke(0);
+        int imageSize = 350;
+        rect(largeBlockX -2 + (largeBlockSize-imageSize)/2 ,largeBlockY - 2 + (largeBlockSize-imageSize)/2 ,
+                imageSize +4 ,imageSize + 4,2);
+        fill(0);
+        textSize(15);
+        image(item.variable,largeBlockX +((largeBlockSize-imageSize)/2),largeBlockY+(largeBlockSize/2),
+                imageSize,imageSize);
+        textAlign(CENTER);
+        text(TextLine,largeBlockX +((largeBlockSize-imageSize)/2), largeBlockY+imageSize+(largeBlockSize-imageSize)/4,imageSize,100);
+    }
+
+    void newItem(boolean likeOrDislike){
         if((item == itemSelector.chair_rbb || item == itemSelector.chair_rnm) && !finished) {
             finished = true;
             drawCongratulations();
         }
-        if(!finished) {
+        if(!finished && likeOrDislike) {
             setItem(itemSelector.returnLikedItem(item));
         }
-    }
-
-    void dislikeButtonPressed(){
-        if(!finished)
-        setItem(itemSelector.returnDislikedItem(item));
+        if(!finished && !likeOrDislike) {
+            setItem(itemSelector.returnDislikedItem(item));
+        }
     }
 
     void setItem(Item SetItem){

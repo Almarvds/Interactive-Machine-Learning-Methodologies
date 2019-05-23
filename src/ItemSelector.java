@@ -147,57 +147,92 @@ public class ItemSelector extends PApplet{
 
     void AssignChairs(){
 
-        chair_bnb = new Item(chair_Bnb,"couch_gnm", "couch_gnb");
-        chair_bnm = new Item(chair_Bnm,"couch_gnm", "couch_gnb");
+        chair_bnb = new Item(chair_Bnb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_bnm = new Item(chair_Bnm,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_brnb = new Item(chair_Brnb,"couch_gnm", "couch_gnb");
-        chair_brnm = new Item(chair_Brnm,"chair pinb", "chair_grnm");
-        chair_brnc = new Item(chair_Brnc, "chair pinb", "chair_grnm");
+        chair_brnb = new Item(chair_Brnb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_brnm = new Item(chair_Brnm,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_brnc = new Item(chair_Brnc, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_gnb = new Item(chair_Gnb, "chair_gnc", "couch_pinc");
-        chair_gnc = new Item(chair_Gnc, "chair_gnm", "chair_pinc");
-        chair_gnm = new Item(chair_Gnm,  "couch_gnm", "couch_gnb");
+        chair_gnb = new Item(chair_Gnb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_gnc = new Item(chair_Gnc, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_gnm = new Item(chair_Gnm,  "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_grbrc = new Item(chair_Grbrc,"couch_gnm", "couch_gnb");
-        chair_grnm = new Item(chair_Grnm, "chair_grbrc", "chair_punc");
+        chair_grbrc = new Item(chair_Grbrc,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_grnm = new Item(chair_Grnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_pinb = new Item(chair_Pinb, "chair_pinc", "chair_punc");
-        chair_pinc = new Item(chair_Pinc,"chair_rnm", "chair_rbb");
-        chair_pinm = new Item(chair_Pinm,"couch_rnm", "couch_gnb");
+        chair_pinb = new Item(chair_Pinb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_pinc = new Item(chair_Pinc,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_pinm = new Item(chair_Pinm,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_punb = new Item(chair_Punb,  "chair pinb", "chair_brnm");
-        chair_punc = new Item(chair_Punc,  "chair_rnm", "chair_rbb");
+        chair_punb = new Item(chair_Punb,  "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_punc = new Item(chair_Punc,  "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_yenb = new Item(chair_Yenb,"couch_gnm", "couch_gnb");
-        chair_yenc = new Item(chair_Yenc,"couch_gnm", "couch_gnb");
-        chair_yenm = new Item(chair_Yenm,"couch_gnm", "couch_gnb");
+        chair_yenb = new Item(chair_Yenb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_yenc = new Item(chair_Yenc,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_yenm = new Item(chair_Yenm,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        chair_rnm = new Item(chair_Rnm, "couch_gnm", "couch_gnb");
-        chair_rbb = new Item(chair_Rbb,"couch_gnm", "couch_gnb");
+        chair_rnm = new Item(chair_Rnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        chair_rbb = new Item(chair_Rbb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
         //couches
 
-        couch_bnb = new Item(couch_Bnb, "couch_bnm", "couch yenm");
-        couch_bnm = new Item(couch_Bnm, "couch_gnm", "couch yenb");
+        couch_bnb = new Item(couch_Bnb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_bnm = new Item(couch_Bnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_brnb = new Item(couch_Brnb,  "couch_gnm", "couch_gnb");
-        couch_brnc = new Item(couch_Brnc, "couch_gnm", "couch_gnb");
+        couch_brnb = new Item(couch_Brnb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_brnc = new Item(couch_Brnc,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_yenb = new Item(couch_Yenb, "couch yenm", "couch_gnb");
-        couch_yenm = new Item(couch_Yenm, "couch_gnm", "chair_punb");
+        couch_yenb = new Item(couch_Yenb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_yenm = new Item(couch_Yenm,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_gnb = new Item(couch_Gnb, "couch_gnm", "chair_punb");
-        couch_gnm = new Item(couch_Gnm, "couch_gnb", "chair_brnc");
+        couch_gnb = new Item(couch_Gnb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_gnm = new Item(couch_Gnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_grnm = new Item(couch_Grnm, "couch_gnm", "couch_gnb");
+        couch_grnm = new Item(couch_Grnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_pinb = new Item(couch_Pinb,"couch_gnm", "couch_gnb");
-        couch_pinc = new Item(couch_Pinc, "chair_pinc", "couch_brnb");
+        couch_pinb = new Item(couch_Pinb,"color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_pinc = new Item(couch_Pinc, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_punb = new Item(couch_Punb, "couch_gnm", "couch_gnb");
-        couch_punc = new Item(couch_Punc, "couch_gnm", "couch_gnb");
+        couch_punb = new Item(couch_Punb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_punc = new Item(couch_Punc, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
 
-        couch_rnb = new Item(couch_Rnb, "couch_gnm", "couch_gnb");
-        couch_rnm = new Item(couch_Rnm, "couch_gnm", "couch_gnb");
+        couch_rnb = new Item(couch_Rnb, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
+        couch_rnm = new Item(couch_Rnm, "color", bluedrop,"couch_gnm", "chair_bnb",
+                "couch_bnm","couch_gnb");
     }
 
     Item returnLikedItem(Item item){
