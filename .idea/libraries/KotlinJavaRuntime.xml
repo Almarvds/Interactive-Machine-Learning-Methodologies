@@ -4,10 +4,14 @@
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-runtime.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-reflect.jar!/" />
       <root url="jar://C:/Program Files/processing-3.5.3-windows64/processing-3.5.3/core/library/core.jar!/" />
+      <root url="file://$KOTLIN_BUNDLED$/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-runtime-sources.jar!/" />
+      <root url="file://$KOTLIN_BUNDLED$/lib" />
     </SOURCES>
+    <jarDirectory url="file://$KOTLIN_BUNDLED$/lib" recursive="false" />
+    <jarDirectory url="file://$KOTLIN_BUNDLED$/lib" recursive="false" type="SOURCES" />
   </library>
 </component>
