@@ -197,7 +197,7 @@ public class ItemSelector extends PApplet{
         //couches
 
         couch_bnb = new Item(couch_Bnb,"color", bluedrop,"couch_gnm", "chair_bnb",
-                "couch_bnm","couch_gnb");
+                "couch_bnm","couch_gnm");
         couch_bnm = new Item(couch_Bnm, "color", bluedrop,"couch_gnm", "chair_bnb",
                 "couch_bnm","couch_gnb");
 
@@ -235,9 +235,16 @@ public class ItemSelector extends PApplet{
                 "couch_bnm","couch_gnb");
     }
 
-    Item returnLikedItem(Item item){
-        System.out.println("LIKED ITEM!");
-        return StringConverter(item.Like);
+    Item returnLikedItem(Item item, String itemLiked){
+        if(itemLiked == "dislike"){
+            System.out.println("DISLIKED ITEM & DISLIKED VARIABLE!");
+            return StringConverter(item.dislikeItem);
+        }
+        if(itemLiked == "like"){
+            System.out.println("LIKED ITEM & VARIABLE!");
+            return StringConverter(item.likeItem);
+        }
+        return item;
     }
 
     Item StringConverter(String name){
@@ -280,8 +287,15 @@ public class ItemSelector extends PApplet{
         return null;
     }
 
-    Item returnDislikedItem(Item item){
-        System.out.println("DISLIKED ITEM!");
-        return StringConverter(item.Dislike);
+    Item returnDislikedItem(Item item, String itemLiked){
+        if(itemLiked == "like"){
+            System.out.println("LIKED ITEM BUT DISLIKED VARIABLE!");
+            return StringConverter(item.dislikeVariable);
+        }
+        if(itemLiked == "dislike"){
+            System.out.println("DISLIKED ITEM BUT LIKED VARIABLE!");
+            return StringConverter(item.likeVariable);
+        }
+        return item;
     }
 }

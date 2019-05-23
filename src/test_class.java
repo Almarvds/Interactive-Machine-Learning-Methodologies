@@ -76,6 +76,8 @@ public class test_class extends PApplet
         System.out.println("loaded chair images");
         loadCouches();
         System.out.println("loaded couch images");
+        loadCategories();
+        System.out.println("loaded categories");
         itemSelector.AssignChairs();
         System.out.println("Assigned chair values");
         setItem(itemSelector.couch_bnb);
@@ -115,7 +117,7 @@ public class test_class extends PApplet
 
     public void loadCouches(){
         itemSelector.couch_Bnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_bnb.jpg");
-        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
+        itemSelector.couch_Bnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_bnm.jpg");
 
         itemSelector.couch_Brnb = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnb.jpg");
         itemSelector.couch_Brnc = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch brnc.jpg");
@@ -138,6 +140,24 @@ public class test_class extends PApplet
         itemSelector.couch_Rnm = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\furnishing\\couches\\couch_rnm.jpg");
     }
 
+    public void loadCategories(){
+        itemSelector.reddrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\red_drop.png");
+        itemSelector.browndrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\brown_drop.png");
+        itemSelector.bluedrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\blue_drop.png");
+        itemSelector.greydrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\grey_drop.png");
+        itemSelector.blackdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\black_drop.png");
+        itemSelector.greendrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\green_drop.png");
+        itemSelector.yellowdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\yellow_drop.png");
+        itemSelector.pinkdrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\pink_drop.png");
+        itemSelector.purpledrop = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\purple_drop.png");
+        itemSelector.Classic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Classic.png");
+        itemSelector.Modern = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Modern.png");
+        itemSelector.Basic = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\Basic.png");
+        itemSelector.functionChair = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\chair_icon.png");;
+        itemSelector.functionAccesory = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\lamp.png");;
+        itemSelector.functionCloset = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\closet.png");;
+        itemSelector.functionCouch = loadImage("C:\\Users\\s159536\\IdeaProjects\\Furnishing_App\\Assets\\images\\categories\\sofa.png");;
+    }
 
     public void draw(){
 
@@ -207,29 +227,32 @@ public class test_class extends PApplet
     }
 
     void likeButtonPressed() {
-        System.out.println("liked");
-        System.out.println(item.variable);
         if(textItem) {
+            System.out.println("liked variable");
             textItem = false;
             newItem(true);
+        } else{
+            System.out.println("liked");
+            choseItem("like");
         }
-        choseItem("like");
     }
 
     void dislikeButtonPressed(){
-        System.out.println("disliked");
-        System.out.println(item.variable);
         if(textItem) {
+            System.out.println("disliked variable");
             textItem = false;
             newItem(false);
+        } else{
+            System.out.println("disliked");
+            choseItem("Dislike");
         }
-        choseItem("Dislike");
-        if(!finished)
-            setItem(itemSelector.returnDislikedItem(item));
     }
 
     void choseItem(String likeOrDislike){
-        textItem = true;
+        if(textItem == false) {
+            System.out.println("new textItem");
+            textItem = true;
+        }
         if(likeOrDislike == "like"){
             likeDislike = "like";
         } else{
@@ -238,19 +261,19 @@ public class test_class extends PApplet
     }
 
     void drawTextItem(){
-        String TextLine = "did you " + likeDislike + " it because it has this " + item.typeOfVariable + "?";
-        System.out.println(TextLine);
+        String TextLine = "Did you " + likeDislike + " it because \n it has this " + item.typeOfVariable + "?";
         strokeWeight(5);
         stroke(0);
         int imageSize = 350;
+        int categorySize = 50;
         rect(largeBlockX -2 + (largeBlockSize-imageSize)/2 ,largeBlockY - 2 + (largeBlockSize-imageSize)/2 ,
                 imageSize +4 ,imageSize + 4,2);
         fill(0);
-        textSize(15);
-        image(item.variable,largeBlockX +((largeBlockSize-imageSize)/2),largeBlockY+(largeBlockSize/2),
-                imageSize,imageSize);
+        textSize(25);
+        image(item.variable,(width/2)-(categorySize/2),largeBlockY+(largeBlockSize/2)-20-categorySize/2,
+                categorySize,categorySize*3/2);
         textAlign(CENTER);
-        text(TextLine,largeBlockX +((largeBlockSize-imageSize)/2), largeBlockY+imageSize+(largeBlockSize-imageSize)/4,imageSize,100);
+        text(TextLine,largeBlockX +((largeBlockSize-imageSize)/2)+5, largeBlockY+imageSize+(largeBlockSize-imageSize)/4-20,imageSize,100);
     }
 
     void newItem(boolean likeOrDislike){
@@ -259,10 +282,10 @@ public class test_class extends PApplet
             drawCongratulations();
         }
         if(!finished && likeOrDislike) {
-            setItem(itemSelector.returnLikedItem(item));
+            setItem(itemSelector.returnLikedItem(item,likeDislike));
         }
         if(!finished && !likeOrDislike) {
-            setItem(itemSelector.returnDislikedItem(item));
+            setItem(itemSelector.returnDislikedItem(item,likeDislike));
         }
     }
 
@@ -271,6 +294,7 @@ public class test_class extends PApplet
         System.out.println("setting new item");
         item = SetItem;
         System.out.println("new item set");
+        System.out.println(textItem);
     }
 
 }

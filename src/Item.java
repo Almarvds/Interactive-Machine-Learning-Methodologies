@@ -9,18 +9,18 @@ public class Item extends PApplet{
     public PImage itemImage;
     public PImage variable;
     public String typeOfVariable;
-    public String Like;
-    public String Dislike;
+    public String likeItem;
+    public String dislikeItem;
     public String likeVariable;
     public String dislikeVariable;
 
-    Item(PImage currentItemImage, String tOV_, PImage variable_, String likeDislike, String DislikeLike, String likeLike, String dislikeDislike){
+    Item(PImage currentItemImage, String tOV_, PImage variable_, String likeDislike, String dislikeLike, String likeLike, String dislikeDislike){
         itemImage = currentItemImage;
         variable = variable_;
         typeOfVariable = tOV_;
-        Like = likeLike;
-        Dislike = dislikeDislike;
-        likeVariable = likeLike;
-        dislikeVariable = dislikeDislike;
+        likeItem = likeLike;
+        dislikeItem = dislikeDislike;
+        likeVariable = dislikeLike;
+        dislikeVariable = likeDislike;
     }
 }
