@@ -184,7 +184,7 @@ public class ItemSelector extends PApplet{
                 "chair_pinc","chair_rnm");
 
         chair_yenb = new Item(chair_Yenb,"color", yellowdrop,"chair_pinc", "chair yenc",
-                "chair yenc","couch_gnm");
+                "chair yenc","chair_pinc");
         chair_yenc = new Item(chair_Yenc,"color", yellowdrop,"chair_rnm", "chair_yenb",
                 "chair_punc","chair_punb");
         chair_yenm = new Item(chair_Yenm,"color", bluedrop,"couch_gnm", "chair_bnb",
