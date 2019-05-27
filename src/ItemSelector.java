@@ -159,7 +159,7 @@ public class ItemSelector extends PApplet{
         chair_gnm = new Item(chair_Gnm,"chair yenb", "chair_pinc", "chair_gnc");
 
         chair_grbrc = new Item(chair_Grbrc,"chair pinb", "couch_grnm", "chair yenc");
-        chair_grnm = new Item(chair_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_grnm = new Item(chair_Grnm,"chair_bnm", "chair_yenc", "chair_pinm");
 
         chair_pinb = new Item(chair_Pinb,"chair_pinc", "chair_pinm", "chair_punb");
         chair_pinc = new Item(chair_Pinc,"couch_pinc", "chair_punc", "chair_rbb");
@@ -169,8 +169,8 @@ public class ItemSelector extends PApplet{
         chair_punc = new Item(chair_Punc,"chair_rbb", "chair_rnm", "couch_punc");
 
         chair_yenb = new Item(chair_Yenb,"chair yenc", "chair yenm", "chair pinb");
-        chair_yenc = new Item(chair_Yenc,"chair_bnm", "chair_bnb", "chair_bnb");
-        chair_yenm = new Item(chair_Yenm,"chair_bnm", "chair_bnb", "chair_bnb");
+        chair_yenc = new Item(chair_Yenc,"chair_punc", "chair pinb", "chair_gnm");
+        chair_yenm = new Item(chair_Yenm,"chair_punc", "chair pinb", "chair_gnm");
 
         chair_rnm = new Item(chair_Rnm,"couch yenb", "couch yenm", "chair yenb");
         chair_rbb = new Item(chair_Rbb,"couch yenm", "couch yenb", "chair yenm");
@@ -189,7 +189,7 @@ public class ItemSelector extends PApplet{
         couch_gnb = new Item(couch_Gnb,"couch_gnm", "couch_bnb", "chair_gnb");
         couch_gnm = new Item(couch_Gnm,"couch_bnm", "chair_bnb", "couch yenm");
 
-        couch_grnm = new Item(couch_Grnm,"chair_bnm", "chair_bnb", "chair_bnb");
+        couch_grnm = new Item(couch_Grnm,"chair_bnm", "chair_bnb", "couch_pinb");
 
         couch_pinb = new Item(couch_Pinb,"chair_rbb", "chair rnm", "couch_rnm");
         couch_pinc = new Item(couch_Pinc,"chair_punc", "chair_punb", "couch_punb");
